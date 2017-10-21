@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title"></title>
+      <meta data-attach-point="keywords" name="keywords" content="">
+      <meta data-attach-point="description" name="description" content="">
+      <link rel="stylesheet" type="text/css" href="src/mobile.min.css"/>
+      <script src="require.min.js"></script>
+      <script src="require-config.js"></script>
+</head>
+<body>
+<header class="cateHeader">
+      <div class="search_back" onclick="history.back()"></div>
+      <a class="goodCate">优惠券</a>
+</header>
+
+<div data-attach-point="data"></div>
+<!--弹出层-->
+<div id="top" class="topdiv">
+      <ul class="clear_his">
+            <li class="tophis" id="tophis">是否清空已过期优惠券</li>
+            <li>
+                  <span class="cancel" id="cancel"><a>取消</a></span>
+                  <span class="confirm" id="ok"><a>确定</a></span>
+            </li>
+      </ul>
+</div>
+<!--遮罩层-->
+<div id="below" class="belowdiv"></div>
+<script>require(['components/coupon']);</script>
+</body>
+</html>

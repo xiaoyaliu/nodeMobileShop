@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title"></title>
+      <meta data-attach-point="keywords" name="keywords" content="">
+      <meta data-attach-point="description" name="description" content="">
+      <link rel="stylesheet" type="text/css" href="../src/mobile.min.css"/>
+      <script src="../require.min.js"></script>
+      <script src="../require-config.js"></script>
+</head>
+<body>
+<header class="cateHeader">
+      <div class="search_back" onclick="history.back()"></div>
+      <a class="goodCate">需求登记</a>
+</header>
+<div class="needLog">
+      <form>
+            <div class="needLog_box">
+                  <div class="prod_rol2">
+                        <label>商品名称：</label>
+                        <span id="goodsName"></span>
+                  </div>
+                  <div class="prod_rol2">
+                        <label>优德价：</label>
+                        <span class="before_price" id="goodsPrice">40.00</span>
+                  </div>
+                  <div class="prod_stock">
+                        <span class="stock_num">数量：</span>
+                        <div class="stock_count">
+                              <span class="stock_reduce" data-attach-point="reduceNum">-</span>
+                              <input class="sto_count-input1" name="goods_num" type="text" value="1">
+                              <span class="stock_add" data-attach-point="addNum">+</span>
+                        </div>
+                        <div class="clear"></div>
+                  </div>
+            <!--填写信息-->
+
+                  <ul class="requireInfo">
+                        <li>
+                              <label>姓名：</label>
+                              <input type="text"  maxlength="40" name="name" onkeyup="value=value.replace(/[^A-Za-z\u4E00-\u9FA5]/g,'')" onbeforepaste="clipboardData.setData(''text'',clipboardData.getData(''text'').replace(/[^A-Za-z\u4E00-\u9FA5]/g,''))" placeholder="请输入姓名(必填)">
+                        </li>
+                        <li>
+                              <label>手机：</label>
+                              <input type="text"  maxlength="11" name="mobile" placeholder="请输入手机号(必填)">
+                        </li>
+                        <li>
+                              <label>地址：</label>
+                              <div class="show_province" data-attach-point="show_province">请选择省份</div>
+                              <input type="hidden" name="province">
+                        </li>
+                        <li>
+                              <div class="show_city" data-attach-point="show_city">请选择市</div>
+                              <input type="hidden" name="city">
+                        </li>
+                        <li>
+                              <div class="show_area" data-attach-point="show_area">请选择区</div>
+                              <input type="hidden" name="district">
+                        </li>
+                        <li>
+                              <input type="text" class="adr_detail" name="address" onkeyup="value=value.replace(/[^A-Za-z\d\u4E00-\u9FA5]/g,'')" onbeforepaste="clipboardData.setData(''text'',clipboardData.getData(''text'').replace(/[^A-Za-z\d\u4E00-\u9FA5]/g,''))" placeholder="请输入详细地址">
+                        </li>
+                        <li>
+                              <label>备注：</label>
+                              <input maxlength="120" type="text" onkeyup="value=value.replace(/[^A-Za-z\d\u4E00-\u9FA5]/g,'')" onbeforepaste="clipboardData.setData(''text'',clipboardData.getData(''text'').replace(/[^A-Za-z\d\u4E00-\u9FA5]/g,''))" name="txtRemark">
+                        </li>
+                        <input name="goods_name" type="hidden"/>
+                  </ul>
+
+         </div>
+    </form>
+
+      <div class="req_bot_div">
+            <p class="req_phone">
+                  如需协助请拨打<a href="tel:4008606111">4008-606-111</a>
+            </p>
+            <div class="req_btn">
+                  <button type="button" class="con_Btn btn-block btn-before" data-attach-point="submit-btn">确定</button>
+            </div>
+      </div>
+
+      <!--选择地址-->
+            <!--省份-->
+            <div class="usercity usercity-fix"  id="selProvinces" style="display:none;">
+                  <ul>
+                  </ul>
+            </div>
+            <!--城市-->
+            <div class="usercity usercity-fix" style="display:none" id="selCities">
+                  <ul>
+                  </ul>
+            </div>
+            <div class="usercity usercity-fix" style="display: none" id="selDistricts">
+                  <ul>
+                  </ul>
+            </div>
+      </div>
+<div id="below" class="belowdiv" style="display: none;"></div>
+<script>
+      require(['components/needReg']);
+</script>
+</body>
+</html>

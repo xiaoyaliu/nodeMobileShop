@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>注册领红包，奖励拿到你手软</title>
+    <style type="text/css">
+        *{margin:0px;padding: 0px;}
+        body{font-size:14px;font-family: "PingFang SC Medium";max-width: 640px;margin: 0 auto;}
+        .img img{display: block;width:100%;font-size: 0px;}
+        .cont{height:340px;background-color: #76ADFF;padding: 20px;}
+        .cont .number{padding-top: 80px;color:#3769BF;font-size:16px;}
+        .number span{color:#ffffff;}
+        .button{text-align: center;margin-top: 50px;}
+        .button a{display: inline-block;width:200px;height:50px;text-align: center;line-height: 50px;background-color: #DDEAFF;color:#3978E6;font-size: 18px;border-radius:6px;}
+        .watchRule{text-align: center;margin-top: 64px;}
+        .watchRule a{color:#2C5DB4;text-decoration: none;font-size: 15px;}
+        .shareRule{position: absolute;top: 325%;width:90%;left: 5%;display: none;}
+        .shareRule .header img{width:100%;}
+        .header{background-color: #fff;}
+        .content{background-color: #ffffff;padding:10px;border-radius: 5px;}
+        .content p{color:#656565;line-height: 22px;}
+        .close a{display: inline-block;float: right;}
+        .close a img{width:40px;}
+        #number{border: none;  background-color: #76ADFF;  font-size: 16px;  width: 100px; color: #ffffff;outline:none;}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="img">
+            <img src="../image/share-1.jpg" alt="">
+            <img src="../image/share-2.jpg" alt="">
+            <img src="../image/share-3.jpg" alt="">
+        </div>
+        <div class="cont">
+            <p class="number">复制邀请码: <input id="number" data-attach-point="number"  readonly="readonly" value="" onclick="copy(this)" /></p>
+            <p class="button"><a  onclick="getApp()">立即下载</a></p>
+            <p class="watchRule"><a  onclick="show()">查看活动规则</a></p>
+        </div>
+        <div class="shareRule" id="shareRule">
+            <div class="header"><img src="../image/shareRule.jpg" alt=""></div>
+            <div class="content">
+                <p>1.分享者需要注册优德医药网账户才能参与该活动。</p>
+                <p>2.阅读者需要安装优德医药网APP并注册账户才 能参与该活动。</p>
+                <p>3.阅读者在注册账户时需要填写分享者的邀请码 才能领取红包。</p>
+                <p>4.阅读者成功注册并正确填写邀请码后，分享者 和阅读者每人可获取2元红包，红包将存入优德 医药网账户余额，全场消费无门槛使用。</p>
+                <p>5.获取红包数量无上限。</p>
+                <p>6.活动暂无结束时间，就看老板什么时候发现了。</p>
+                <p>7.本活动最终解释权归优德医药网所有。</p>
+            </div>
+            <div class="close"><a onclick="cl()"><img src="../image/shareClose.png" alt=""></a></div>
+        </div>
+
+    </section>
+</body>
+<script>
+var shareRule=document.getElementById("shareRule");
+function cl(){
+     shareRule.style.display="none";
+}
+function show(){
+    shareRule.style.display="block";
+}
+var browser = {
+    versions: function() {
+        var u = navigator.userAgent, app = navigator.appVersion;
+        return {//移动终端浏览器版本信息
+            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+            iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+            iPad: u.indexOf('iPad') > -1, //是否iPad
+            webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+        };
+    }(),
+    language: (navigator.browserLanguage || navigator.language).toLowerCase()
+};
+function getApp() {
+    if (browser.versions.ios || browser.versions.iPhone) {
+        if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i)=="micromessenger") {
+            location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.qudu.youde";
+        }else{
+            location.href="https://itunes.apple.com/cn/app/you-de-yi-yao/id1129707773?mt=8";
+        }
+    }else if (browser.versions.android) {
+        location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.qudu.youde";
+    }
+}
+function copy(that){
+    var clipBordContent=document.getElementById("number").innerHTML;
+    if (browser.versions.ios || browser.versions.iPhone) {
+        if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i)=="micromessenger") {//安卓
+            //微信浏览器中ios自动复制也无效，所以不做任何操作，需要用户自己长按
+        }else{    //ios
+            //ios不做任何操作，需用户自己长按复制
+        }
+    }else if (browser.versions.android){//安卓
+        that.select();
+        document.execCommand("Copy");
+        alert("复制成功");
+    }
+}
+</script>
+</html>

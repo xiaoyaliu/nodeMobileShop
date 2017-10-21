@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="../js/ext/jquery-1.7.2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            //全选、全不选
+            $("[data-attach-point=ck]").change(function(){
+                if($(this).is(':checked')){
+                    $("[name = chkItem]:checkbox").attr("checked", true);
+                    //算价
+
+
+                }else{
+                    $("[name = chkItem]:checkbox").attr("checked", false);
+                    //算价
+
+
+                }
+            });
+            //单选过滤每一个chkItem
+            var obj=$("[name = chkItem]:checkbox");
+            obj.click(function(){
+                //改状态
+                var flag=true;
+                obj.each(function(i,item){
+                    if(!$(item).is(':checked')){
+                        flag=false;
+                        $("[data-attach-point=ck]").attr("checked", false);
+                        return false;
+                    }
+                })
+                if(flag){
+                    $("[data-attach-point=ck]").attr("checked", true);
+                }
+                //算价
+
+            })
+
+
+
+        });
+    </script>
+</head>
+<body>
+<div>
+    <input data-attach-point="ck"  type="checkbox" value="全选" checked/>
+    全选
+    <input name="chkItem" type="checkbox" value="今日话题" checked/>
+    今日话题
+    <input name="chkItem" type="checkbox" value="视觉焦点" checked/>
+    视觉焦点
+    <input name="chkItem" type="checkbox" value="财经" checked/>
+    财经
+    <input name="chkItem" type="checkbox" value="汽车" checked/>
+    汽车
+    <input name="chkItem" type="checkbox" value="科技" checked/>
+    科技
+    <input name="chkItem" type="checkbox" value="房产" checked/>
+    房产
+    <input name="chkItem" type="checkbox" value="旅游" checked/>
+    旅游 </div>
+<div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title"></title>
+      <meta data-attach-point="keywords" name="keywords" content="">
+      <meta data-attach-point="description" name="description" content="">
+      <link rel="stylesheet" type="text/css" href="../src/dropload.min.css"/>
+      <link rel="stylesheet" type="text/css" href="../src/swiper.min.css"/>
+      <link rel="stylesheet" type="text/css" href="../src/mobile.css"/>
+      <script src="../require.min.js"></script>
+      <script src="../require-config.js"></script>
+
+</head>
+<body>
+<header class="cateHeader">
+      <div class="search_back"  onclick="window.history.back()"></div>
+      <a class="goodCate">订单中心</a>
+
+      <div class="go-quick-click" id="go-quick-click">
+            <a></a>
+      </div>
+</header>
+<div class="quick-go-div" id="quick-go-div">
+      <ul class="botList">
+            <li>
+                  <a href="/">首页</a>
+            </li>
+            <li>
+                  <a href="/cart">购物车</a>
+            </li>
+            <li>
+                  <a href="/user">用户中心</a>
+            </li>
+            <li>
+                  <a href="logisticsAll">物流查询</a>
+            </li>
+      </ul>
+</div>
+<ul class="state_list order_ul clearfix" data-attach-point="order-state"></ul>
+<section class="pb40" data-attach-point="order-list">
+      <div data-attach-point="allList"></div>
+      <div data-attach-point="waitPayList"></div>
+      <div data-attach-point="waitConfirmList"></div>
+      <div data-attach-point="waitRateList"></div>
+
+</section>
+<!--删除订单对话框-->
+
+<div id="top" class="topdiv">
+      <ul class="clear_his">
+            <li class="tophis" id="tophis">您确认要删除此订单吗？</li>
+            <li>
+                  <span class="cancel" id="cancel"><a>取消</a></span>
+                  <span class="confirm" id="ok"><a>确定</a></span>
+            </li>
+      </ul>
+</div>
+
+<!--遮罩层-->
+<div id="below" class="belowdiv"></div>
+<div class="bottom-to-top" style="display: none;" data-attach-point="returnTop"> <img src="/image/big.png" style="width: 100%"> </div>
+<div style='display: none;' id='common-div'>退换货商品不能评价</div>
+<script>require(['components/order'])</script>
+</body>
+</html>

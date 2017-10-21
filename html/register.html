@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <title data-attach-point="title">用户注册--优德医药网</title>
+    <meta data-attach-point="keywords" name="keywords" content="">
+    <meta data-attach-point="description" name="description" content="">
+    <link rel="stylesheet" type="text/css" href="src/mobile.min.css"/>
+    <script src="require.min.js"></script>
+    <script src="require-config.js"></script>
+</head>
+<body>
+<header class="cateHeader">
+    <div class="search_back" data-attach-point="gb"></div>
+    <a class="goodCate">注册</a>
+</header>
+<!--注册信息-->
+<div class="insertBox">
+    <!--第一步-->
+    <div style="display: block" data-attach-point="one">
+        <form>
+            <div class="newAddress">
+                <div class="address">
+                    <span>图形码：</span>
+                    <input type="text" maxlength="11" class="telephone" data-attach-point="imgCode">
+                    <i class="validate-tel" id=""></i>
+                    <div id="v_container" style="width: 100px;height: 30px;"></div>
+                </div>
+                <p class="message-error" style="display: block;" data-attach-point="ierr"></p>
+                <div class="address">
+                    <span>手机号：</span>
+                    <input type="text" maxlength="11" class="telephone" data-attach-point="telephone">
+                    <!--<i class="validate-tel"></i>-->
+                </div>
+                <p class="message-error" style="display: block;" data-attach-point="err"></p>
+                <div class="address">
+                    <span>验证码：</span>
+                    <input type="text" class="PIN" maxlength="6" data-attach-point="PIN">
+                    <!--<button type="button" class="sendPin gray-but" disabled="disabled" data-attach-point="get">获取验证码</button>-->
+                    <button type="button" class="sendPin"  data-attach-point="get">获取验证码</button>
+                </div>
+                <p class="message-error" style="display: block;" data-attach-point="ms"></p>
+            </div>
+
+            <div class="operate">
+                <button type="button" class="saveBtn btn-primary btn-block" data-attach-point="nt">下一步</button>
+            </div>
+        </form>
+    </div>
+    <!--下一步-->
+    <div style="display: none" data-attach-point="two">
+        <form>
+            <div class="newAddress">
+                <div class="address">
+                    <p data-attach-point="tel"></p>
+                </div>
+                <div class="address">
+                    <p class="password">密&nbsp;&nbsp; 码&nbsp;：</p>
+                    <input type="password"  placeholder="6-20位字母或数字组合" data-attach-point="pw"/>
+                    <div class="button_off_mo" style="display:block" data-attach-point="off"></div>
+                    <div class="button_on_mo" style="display: none" data-attach-point="on"><span>abc</span></div>
+                </div>
+                <p class="password-error" style="display: block;" data-attach-point="pwErr"></p>
+            </div>
+
+            <div class="select-check agreement">
+                <input type="checkbox" checked>
+                <label>同意
+                    <a>《优德医药网用户注册协议》</a>
+                </label>
+            </div>
+
+            <div class="operate">
+                <button type="button" class="saveBtn btn-primary btn-block" data-attach-point="sub">立即注册</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    require(['components/register']);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<div class="container_s">
+    <!--搜索条-->
+    <div class="header-sea">
+        <div class="search_back" data-attach-point="goTo" id=""></div>
+        <div class="searchGoods_txt">
+            <div data-attach-point="searchLink">
+                <input type="text"  class="search_pro" placeholder="请输入商品名称"   data-attach-point="kv">
+            </div>
+            <div class="shop_car">
+            <!--购物车-->
+                <a class="shopcar_s" href="/cart">
+                    <i class="shopcar_num" data-attach-point="snm">0</i>
+                    <img src="../image/shop.png" id='collectBox'/>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div data-attach-point="rq">
+
+    </div>
+</div>

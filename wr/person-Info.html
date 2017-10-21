@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+    <script type="text/javascript">
+        function showOrHide(flag) {
+            if(flag == 1) {
+                document.getElementById("top").style.display = "block";
+                document.getElementById("below").style.display = "block";
+            }
+            if(flag == 2) {
+                document.getElementById("top").style.display = "none";
+                document.getElementById("below").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<header class="cateHeader">
+    <div class="search_back"></div>
+    <a class="goodCate">个人信息</a>
+</header>
+
+<div class="all-con">
+    <div class="person-img">
+        <p class="top-gray"></p>
+        <p class="per-photo"><a onclick="showOrHide(1)">头像</a><img src="../css/image/per-img.png"></p>
+    </div>
+
+    <ul class="person-ul clearfix">
+        <li>
+            <a class="rig-go">用户名</a><span></span>
+        </li>
+        <li>
+            <a class="rig-go">姓名</a><span>张三</span>
+        </li>
+        <li>
+            <a class="rig-go">性别</a><span>保密</span>
+        </li>
+        <li>
+            <a class="rig-go">生日</a><span>0000-00-00</span>
+        </li>
+    </ul>
+    <div class="clear"></div>
+
+    <div class="per-email">
+        <p><a class="rig-go">邮箱</a><span></span></p>
+    </div>
+
+    <div class="bot-con">
+        <ul class="allergy">
+            <li>
+                <a class="rig-go">是否用药过敏</a><span>否</span>
+            </li>
+            <li>
+                <a class="rig-go">病史/家族史</a><span class="disease">乙肝、过敏性哮喘、原发性高血压</span>
+            </li>
+        </ul>
+    </div>
+
+    <!--保存按钮-->
+    <div class="operate">
+        <button type="button" class="saveBtn btn-block">保存</button>
+    </div>
+
+</div>
+
+
+<!--选择头像弹出层-->
+<div class="pho-bot" id="top"  style="display:none;">
+    <div class="choose-photo">
+        <ul>
+            <li>
+                <a>拍照</a>
+            </li>
+            <li>
+                <a>相册中选择</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="photo-can">
+        <a>取消</a>
+    </div>
+
+</div>
+
+<!--选择性别弹出层-->
+<div class="pho-bot"  style="display:none;">
+    <div class="choose-photo">
+        <ul>
+            <li class="choose">
+                <a>男</a>
+            </li>
+            <li>
+                <a>女</a>
+            </li>
+            <li>
+                <a>保密</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="photo-can">
+        <a>取消</a>
+    </div>
+
+</div>
+
+<!--日期弹出层-->
+<div class="data-bot"  style="display:none;">
+    <div class="data-select">
+        <div class="data-sel clearfix">
+            <p>
+                <a class="data-no">取消</a>
+                <a class="data-yes">确定</a>
+            </p>
+        </div>
+        <ul>
+            <li class="clearfix">
+                <span>2013</span>
+                <span>01</span>
+                <span>01</span>
+            </li>
+            <li>
+                <span>2013</span>
+                <span>01</span>
+                <span>01</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--遮罩层-->
+<div id="below" class="belowdiv" style="display: none;"></div>
+</body>
+</html>

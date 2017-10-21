@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function showOrHide(flag) {
+            if(flag == 1) {
+                document.getElementById("top").style.display = "block";
+                document.getElementById("below").style.display = "block";
+            }
+            if(flag == 2) {
+                document.getElementById("top").style.display = "none";
+                document.getElementById("below").style.display = "none";
+            }
+        }
+    </script>
+<body>
+<!-- head-->
+<header class="cateHeader">
+    <div class="search_back"></div>
+    <a class="goodCate">全部分类</a>
+    <div class="go-quick-click">
+        <a></a>
+    </div>
+</header>
+
+<div class="quick-go-div" id="quick-go-div" style="display: none">
+    <ul class="botList">
+        <li>
+            <a>首页</a>
+        </li>
+        <li>
+            <a>购物车</a>
+        </li>
+        <li>
+            <a>快递查询</a>
+        </li>
+        <li>
+            <a>会员中心</a>
+        </li>
+    </ul>
+</div>
+<!--轮换-->
+<div class="goodTop">
+    <div class="solid">
+        <img class="goodmid" src="../css/image/goodmid.png">
+    </div>
+</div>
+<!--商品信息-->
+<div class="goodsDetail">
+    <div class="prod_mb_tr">
+        <div class="prob_mb_tr_t">
+            <h3>春装小儿感冒颗粒 儿童普通感冒 流行性感冒 抑郁症20mg*20片</h3>
+        </div>
+        <div class="prod_mb_tr_m prod-second">
+            <div class="prod_mb_info">
+                <div class="prod_rol priceT">
+                    <div class="discount" style="display: none">
+                        <label>活动价格</label>
+                        <strong class="new_price">16.50  </strong> </label>
+                    </div>
+                    <div class="onSale" style="display:block">
+                        <label>优惠价格</label>
+                        <label><strong class="new_price">16.50  </strong> </label>
+                    </div>
+                    <div class="goodPrice">
+                        <label>商品价格</label>
+                        <span class="old_price">18.00</span>
+                    </div>
+                </div>
+
+                <div class="prod_rol pro-two">
+                    <label class="sport">优惠活动</label>
+                    <i class="com_ico">满1000减50</i>
+                    <i class="com_ico">满1000减50</i>
+                    <i class="com_ico">满1000减50</i>
+                    <i class="com_ico">满1000减50</i>
+                    <i class="com_ico">满1000减50</i>
+                    <i class="com_ico">满1000减50</i>
+                </div>
+                <div class="prod_rol">
+                    <label>商品规格</label>
+                    <span>6g*10袋</span>
+                </div>
+                <div class="prod_rol">
+                    <label>生产厂家</label>
+                    <span class="pro_bu">石药集团中诺药业(石家庄)有限公司</span>
+                </div>
+
+                <!--普通商品-->
+                <div style="display: block">
+                    <dl class="comboBox">
+                        <dt>疗程装</dt>
+                        <dd>
+                            <ul class="combo">
+                                <li class="select-pros active">
+                                    <a>
+                                        <span class="f1 fb num">1件</span>
+                                        <em class="f1">
+                                            <i class="moneyBefore">¥</i>42.5/1件
+                                        </em>
+
+                                    </a>
+                                </li>
+
+                                <li class="select-pros ">
+                                    <a>
+                                        <span class="f1 fb num">5件</span>
+                                        <em class="f1">
+                                            <i class="moneyBefore">¥</i>42/1件
+                                        </em>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <form class="formBuy">
+                        <div class="prod_rol prod_kucun">
+                            <span class="NUb">数量</span>
+                            <div class="numCount">
+                                <span class="reduce reduceDisable">-</span>
+                                <input class="count-input" type="text" name="BuyCount" value="1">
+                                <span class="add">+</span>
+                            </div>
+                            <div class="prod_kc">
+                                <span>有货</span>
+                                <span style="color:#f92e2e;">缺货</span>
+                                <span class="goodNum">8</span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </form>
+                </div>
+
+
+                <!--眼镜部分-->
+                <div style="display: none">
+                    <div class="prod_rol">
+                        <label>颜色</label>
+                        <lable class="eyeColor active">蓝色</lable>
+                        <lable class="eyeColor">棕色</lable>
+                        <lable class="eyeColor">黑色</lable>
+                    </div>
+                    <div class="huansuanbox">
+                        <lable class="leftEye">左眼</lable>
+                        <lable class="glass redEye" onclick="showOrHide(1)">请选择度数</lable>
+                        <lable class="leftNum">数量</lable>
+                        <div class="count">
+                            <span class="reduce reduceDisable">-</span>
+                            <input class="count-input" type="text" name="BuyCount" value="1">
+                            <span class="add">+</span>
+                        </div>
+                    </div>
+
+                    <div class="huansuanbox">
+                        <lable class="leftEye">右眼</lable>
+                        <lable class="glass active" onclick="showOrHide(1)">请选择度数</lable>
+                        <lable class="leftNum">数量</lable>
+                        <div class="count">
+                            <span class="reduce reduceDisable">-</span>
+                            <input class="count-input" type="text" name="BuyCount" value="1">
+                            <span class="add">+</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--图文详情-->
+        <div class="info-s">
+            <p class="info-pic">图文详情
+                <a class="rightGo"></a>
+            </p>
+
+            <!-- 说明书-->
+            <div class="directions" style="display: none">
+                <div class="h3">
+                    <h3>说明书</h3>
+                </div>
+                <table>
+                    <tr>
+                        <td><span>药品名称</span></td>
+                        <td><p>果维康维生素C含片</p></td>
+                    </tr>
+                    <tr>
+                        <td><span>规格</span></td>
+                        <td><p>0.79gx60片/瓶</p></td>
+                    </tr>
+                    <tr>
+                        <td><span>成分</span></td>
+                        <td><p>维生素C、维生素C钠、山梨醇粉、天然香料、硬脂酸镁、阿斯巴甜(含苯丙氨酸)、色淀。</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>用法用量</span></td>
+                        <td><p>儿童每日0.395g，成人每日0.790g，即成人每日一片，每片含维生素C100mg；儿童减半。含食。</p></td>
+                    </tr>
+                    <tr>
+                        <td><span>功能主治</span></td>
+                        <td><p>补充维生素C。维生素C的主要功能：  1.增强免疫力，预防感冒及病毒和细菌的感染。 2.促进钙、铁吸收，坚固牙齿，预防骨质疏松和贫血。 3.美白肌肤，抗氧化，延缓黑色素生成，减少皱纹。 4.提高智力，促进胎儿生长发育，降低孕妇分娩危险。 5.治疗受伤、烧伤、烫伤、牙床出血，抑制炎症，加速术后伤口愈合。 6.降低胆固醇，预防动脉硬化，减少血管中血栓的形成，对预防高血压有一定作用。 7.抗坏血病，降低毛细血管通透性，促进血液凝聚。 8.抗压力，提高细胞活力，延缓衰老。 9.改善肝功能，预防癌症和白内障。 10.天然的抗氧化剂，天然的退烧剂，天然的轻泻剂。</p></td>
+                    </tr>
+                    <tr>
+                        <td><span>不良反应</span></td>
+                        <td><p>尚不明确</p></td>
+                    </tr>
+                    <tr>
+                        <td><span>禁忌</span></td>
+                        <td><p>尚不明确</p></td>
+                    </tr>
+                    <tr>
+                        <td><span>相互作用</span></td>
+                        <td><p>如与其他药物同时使用可能会发生药物相互作用，详情请咨询医师或药师。</p></td>
+                    </tr>
+                    <tr>
+                        <td><span>注意事项</span></td>
+                        <td><p>本品不能代替药物；不宜超过推荐量或与同类营养素补充剂同时食用。</p></td>
+                    </tr>
+                    <tr>
+                        <td><span>批准文号</span></td>
+                        <td><p>国食健字G20040673</p></td>
+                    </tr>
+                    <tr>
+                        <td><span>生产企业</span></td>
+                        <td><p>石药集团中诺药业(石家庄)有限公司</p></td>
+                    </tr>
+                </table>
+                <!--图文详情-->
+                <div class="h3">
+                    <h3>图文详情</h3>
+                </div>
+                <div class="img_details">
+                    <img src="../css/image/tuwen.jpg">
+                </div>
+            </div>
+        </div>
+
+
+    <!--评价-->
+    <div class="info-access">
+        <p class="info-access-r">累计评价
+            <a class="accessGo"></a>
+        </p>
+
+        <div class="comment-list">
+            <div class="comment-list-item">
+                <div class="comment-item-info">
+                    <span class="comment-item-author">kangkang</span>
+                    <span class="product-item-star">
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                    </span>
+                </div>
+
+                <div class="comment-item-content down-icon">
+                    <span class="content">分期免息好评。性价比很高就不用说了。反正用来送人很合适。</span>
+                </div>
+
+                <div class="comment-item-date">2016-02-25</div>
+
+            </div>
+        </div>
+
+        <div class="comment-list">
+            <div class="comment-list-item">
+                <div class="comment-item-info">
+                    <span class="comment-item-author">kangkang</span>
+                    <span class="product-item-star">
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                    </span>
+                </div>
+
+                <div class="comment-item-content down-icon">
+                    <span class="content">分期免息好评。性价比很高就不用说了。反正用来送人很合适。</span>
+                </div>
+
+                <div class="comment-item-date">2016-02-25</div>
+            </div>
+        </div>
+
+        <div class="comment-list">
+            <div class="comment-list-item">
+                <div class="comment-item-info">
+                    <span class="comment-item-author">kangkang</span>
+                    <span class="product-item-star">
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class="on"></span>
+                        <span class="on"></span>
+                    </span>
+                </div>
+
+                <div class="comment-item-content down-icon">
+                    <span class="content">分期免息好评。性价比很高就不用说了。反正用来送人很合适。</span>
+                </div>
+
+                <div class="comment-item-date">2016-02-25</div>
+
+            </div>
+        </div>
+    </div>
+    <!--为您推荐-->
+    <div class="mayLike" style="display: block">
+        <h3>为您推荐</h3>
+        <ul class="mayLike_ul">
+            <li>
+                <a>
+                    <div class="like_img">
+                        <img src="../css/image/like1.jpg">
+                    </div>
+                    <p>摩美得 气血和胶囊 月经过...</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class="like_img">
+                        <img src="../css/image/like2.jpg">
+                    </div>
+                    <p>以岭 连花清瘟胶囊 清瘟解毒</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class="like_img">
+                        <img src="../css/image/like3.jpg">
+                    </div>
+                    <p>以岭 连花清瘟胶囊 清瘟解毒</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class="like_img">
+                        <img src="../css/image/like3.jpg">
+                    </div>
+                    <p>以岭 连花清瘟胶囊 清瘟解毒</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class="like_img">
+                        <img src="../css/image/like3.jpg">
+                    </div>
+                    <p>以岭 连花清瘟胶囊 清瘟解毒</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class="like_img">
+                        <img src="../css/image/like3.jpg">
+                    </div>
+                    <p>以岭 连花清瘟胶囊 清瘟解毒</p>
+                </a>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <!--footer-->
+    <div class="footer_fix" style="display: block">
+        <div class="include_ope">
+            <p class="include_ope_p">
+                    <span class="follow">
+                        <a></a>
+                        <em> 关注</em>
+                    </span>
+                    <span>
+                        <a class="cart_animal">
+                            <i class="cart_num_animal">0</i>
+                            <img src="../css/image/gw.png">
+                        </a>
+                        <em>购物车</em>
+                    </span>
+                <em class="clear"></em>
+            </p>
+            <a class="buy">联系药师</a>
+            <span class="addCart">加入购物车</span>
+        </div>
+    </div>
+
+<!--左眼度数-->
+
+<div class="select-list" id="top" style="display: none">
+    <ul class="mui-sku">
+        <li class="mui-sku-group">
+            <h2>左眼度数</h2>
+            <a class="sback">
+                <img src="../css/image/clos.png">
+            </a>
+            <div class="eyes-list">
+                <label class="degree active">100</label>
+                <label>120</label>
+                <label>170</label>
+                <label>200</label>
+                <label>225</label>
+                <label>250</label>
+                <label>300</label>
+                <label>400</label>
+                <label>500</label>
+                <label>600</label>
+                <label>700</label>
+                <label>800</label>
+            </div>
+        </li>
+    </ul>
+    <div class="conBut"><span>确认</span></div>
+</div>
+<!--遮罩层-->
+<div id="below" class="belowdiv"></div>
+</body>
+</html>

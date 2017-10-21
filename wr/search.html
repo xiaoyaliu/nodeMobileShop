@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title>搜索</title>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function showOrHide(flag) {
+            if(flag == 1) {
+                document.getElementById("top").style.display = "block";
+                document.getElementById("below").style.display = "block";
+            }
+            if(flag == 2) {
+                document.getElementById("top").style.display = "none";
+                document.getElementById("below").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<!--弹出层-->
+<div id="top" class="topdiv">
+    <ul class="clear_his">
+        <li class="tophis">是否清空历史搜索</li>
+        <li>
+            <span class="cancel"><a>取消</a></span>
+            <span class="confirm"><a>确定</a></span>
+        </li>
+    </ul>
+</div>
+<!--遮罩层-->
+<div id="below" class="belowdiv"></div>
+
+<div class="container_s">
+    <!--搜索条-->
+    <div class="header-s">
+        <div class="search_back"></div>
+        <div class="searchGoods_txt">
+            <div>
+                <input type="text"  class="search_pro" value="" placeholder="降压灵颗粒" >
+                <a class="icon-close"></a>
+                <input type="submit" class="search_submit" value="搜索">
+            </div>
+        </div>
+    </div>
+    <!--搜索提示列表-->
+    <div class="search_con" style="display: none">
+        <ul class="search_list">
+            <li>
+                <a>正大天晴速乐</a>
+            </li>
+            <li>
+                <a>九九九感冒灵颗粒</a>
+            </li>
+            <li>
+                <a>小儿七星茶</a>
+            </li>
+            <li>
+                <a>高血压</a>
+            </li>
+            <li>
+                <a>糖尿病</a>
+            </li>
+            <li>
+                <a>迈之灵片</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--tab-->
+    <div class="main">
+        <div class="mainSearch" style="display: block">
+            <div class="tab">
+                <div class="searchTab">
+                    <span class="search_tab1 active">我的搜索</span>
+                    <span class="search_tab2 ">大家都在搜</span>
+                </div>
+            </div>
+            <div class="search_box">
+                <ul class="search_list">
+                    <li>
+                        <a>正大天晴速乐</a>
+                    </li>
+                    <li>
+                        <a>九九九感冒灵颗粒</a>
+                    </li>
+                    <li>
+                        <a>小儿七星茶</a>
+                    </li>
+                    <li>
+                        <a>高血压</a>
+                    </li>
+                    <li>
+                        <a>糖尿病</a>
+                    </li>
+                    <li>
+                        <a>迈之灵片</a>
+                    </li>
+                </ul>
+                <div class="sear-clear"><p class="searchhistory" onclick="showOrHide(1)">清空历史记录</p></div>
+                </div>
+            <div class="search_box" style="display:none">
+                <ul class="search_list" >
+                    <li>
+                        <a>正大天晴速乐</a>
+                    </li>
+                    <li>
+                        <a>九九九感冒灵颗粒</a>
+                    </li>
+                    <li>
+                        <a>小儿七星茶</a>
+                    </li>
+                    <li>
+                        <a>高血压</a>
+                    </li>
+                    <li>
+                        <a>糖尿病</a>
+                    </li>
+                    <li>
+                        <a>迈之灵片</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

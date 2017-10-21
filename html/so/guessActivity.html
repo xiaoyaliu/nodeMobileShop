@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>优德之夜·热歌榜中榜音乐盛典</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../src/mobile.css"/>
+    <script src="../require.min.js"></script>
+    <script src="../require-config.js"></script>
+</head>
+<body class="guessActivity">
+<section data-attach-point="guessActSection" class="guessActSection">
+    <marquee  direction=left  class="marq">中奖后未能成功提交收货地址，请及时联系优德医药网客服，祝您中奖！</marquee>
+    <div  class="realImg">
+        <img data-attach-point="realImg" src="../image/wxhb.png" alt="">
+    </div>
+    <div data-attach-point="promptActivity" class="promptActivity">
+        <div class="promptImg">
+            <div class="ta">
+                <img src="../image/TA.png" alt="">
+            </div>
+            <div class="promptTa">
+                <div data-attach-point="promptTa"></div>
+                <p>……</p>
+            </div>
+        </div>
+        <div class="promptInput">
+            <p class="promptInputSub">
+                <input data-attach-point="promptSub" type="text" placeholder="输入猜出的歌星姓名">
+                <button data-attach-point="promptSub" class="promptSub" onclick="getAnswer()"><img src="../image/j-right.png" alt="">验证</button>
+            </p>
+        </div>
+    </div>
+    <div class="activityHref clearfix">
+        <div class="activityRule"><a href="/guessRule"><img src="../image/acRule.jpg" alt=""></a></div>
+        <!--<div class="activityName" onclick="hrefList()"><a><img src="../image/acName.jpg" alt=""></a></div>-->
+    </div>
+</section>
+<!--提示框-->
+<div class="dialog dialog2" style="display: none;height: 95px;width: 60%;left: 19%;padding: 10px;">
+    <a class="diaInfo" style="padding-top: 20px;"></a>
+</div>
+<div id="top2" class="topdiv2">
+    <img src="../image/notGuess.png" alt="">
+</div>
+<div id="top3" class="topdiv3">
+    <div class="lhj">
+        <div class="tps">
+            <p class="tps-p1">TIPS:</p>
+            <p id="tips">猜对啦！开始抽奖吧~</p>
+        </div>
+        <div class="lhj-cont" style="">
+            <div id="machine1" class="slotMachine" name=0>
+                <div class="slot slot1"></div>
+                <div class="slot slot2"></div>
+                <div class="slot slot3"></div>
+                <div class="slot slot4"></div>
+                <div class="slot slot5"></div>
+                <div class="slot slot6"></div>
+            </div>
+            <div id="machine2" class="slotMachine" name=0>
+                <div class="slot slot1"></div>
+                <div class="slot slot2"></div>
+                <div class="slot slot3"></div>
+                <div class="slot slot4"></div>
+                <div class="slot slot5"></div>
+                <div class="slot slot6"></div>
+            </div>
+            <div id="machine3" class="slotMachine" name=0>
+                <div class="slot slot1"></div>
+                <div class="slot slot2"></div>
+                <div class="slot slot3"></div>
+                <div class="slot slot4"></div>
+                <div class="slot slot5"></div>
+                <div class="slot slot6"></div>
+            </div>
+        </div>
+    </div>
+    <div class="lhj-l" id="lhj-l"><img id="lhj-deg" src="../image/lhj-l.png" alt=""></div>
+</div>
+<!--遮罩层-->
+<div id="below" class="belowdiv"></div>
+<input type="hidden" id="machine1Result" value="">
+<input type="hidden" id="machine2Result" value="">
+<input type="hidden" id="machine3Result" value="">
+
+<input type="hidden" id="wxName" data-attach-point="wxName" value="">
+<input type="hidden" data-attach-point="wxHeadImg" value="">
+<input type="hidden" data-attach-point="wxOid" value="">
+<input type="hidden" data-attach-point="wxUid" value="">
+<input type="hidden" data-attach-point="partId" value="">
+<script>require(['components/guessActivity'])</script>
+</body>
+</html>

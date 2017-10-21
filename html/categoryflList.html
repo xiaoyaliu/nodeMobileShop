@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <title data-attach-point="title"></title>
+    <meta data-attach-point="keywords" name="keywords" content="">
+    <meta data-attach-point="description" name="description" content="">
+    <link rel="stylesheet" type="text/css" href="../src/dropload.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../src/mobile.min.css"/>
+    <script src="../require.min.js"></script>
+    <script src="../require-config.js"></script>
+</head>
+<!--分类搜索结果页-->
+<body>
+<header class="cateHeader">
+    <div class="search_back" onclick="history.back()"></div>
+    <a class="goodCate" data-attach-point="cat_name"></a>
+    <div class="go-quick-click" id="go-quick-click">
+        <a></a>
+    </div>
+</header>
+<div class="quick-go-div" id="quick-go-div">
+    <ul class="botList">
+        <li>
+            <a href="/">首页</a>
+        </li>
+        <li>
+            <a href="/cart">购物车</a>
+        </li>
+        <li>
+            <a href="/user">用户中心</a>
+        </li>
+        <li>
+            <a href="logisticsAll">物流查询</a>
+        </li>
+    </ul>
+</div>
+<!--tab-->
+<div class="search-list" style="padding-top: 48px">
+    <div class="tabOorderBy">
+        <ul class="tabThree clearfix" style="padding-top: 0px;">
+            <li data-attach-point="t1" class="orderBy1 active" style="float: left"><a><span class="span1">综合</span></a></li>
+            <li data-attach-point="t2" class="orderBy2" style="text-align: center"><a><span>销量</span></a></li>
+            <li data-attach-point="t3" class="orderBy3" style="float: right;"><a><span id="priceId" class="default">价格</span></a></li>
+        </ul>
+    </div>
+</div>
+<!--正文-->
+<div class="pb40" data-attach-point="order-list">
+      <ul  class="listResult" data-attach-point="togetherList"></ul>
+       <ul class="listResult" data-attach-point="salesList"></ul>
+       <ul class="listResult" data-attach-point="priceUpList"></ul>
+       <ul class="listResult" data-attach-point="priceDownList"></ul>
+</div>
+
+
+
+<!--提示框-->
+<div class="dialog" style="display: none">
+    <a class="diaInfo"></a>
+</div>
+<div class="bottom-to-top" style="display: none;" data-attach-point="returnTop"> <img src="/image/big.png" style="width: 100%"> </div>
+<script>
+    require(['components/categoryflList']);
+</script>
+</body>
+</html>

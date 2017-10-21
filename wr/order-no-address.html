@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+
+    <script type="text/javascript">
+        function showOrHide(flag) {
+            if(flag == 1) {
+                document.getElementById("top").style.display = "block";
+                document.getElementById("below").style.display = "block";
+            }
+            if(flag == 2) {
+                document.getElementById("top").style.display = "none";
+                document.getElementById("below").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div style="display: none">
+    <header class="cateHeader">
+        <div class="search_back"></div>
+        <a class="goodCate">确认订单</a>
+        <div class="go-quick-click">
+            <a></a>
+        </div>
+    </header>
+    <div class="quick-go-div" id="quick-go-div" style="display: none;">
+        <ul class="botList">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">购物车</a>
+            </li>
+            <li>
+                <a href="#">用户中心</a>
+            </li>
+        </ul>
+    </div>
+    <div class="no-address">
+        <!--无地址部分-->
+        <div class="add-address" style="display: block">
+            <p class="addressTitle">
+                <a class="addiIcon">
+                    <img class="no_add" src="../css/image/noadd.png">
+                </a>
+                <span>添加收货地址</span>
+            </p>
+            <a class="address_tiao"></a>
+            <div>
+                <img class="add-xian" src="../css/image/xian.png">
+            </div>
+        </div>
+
+        <!--确认地址信息-->
+        <div class="address-Info" style="display: none">
+            <div class="address_mo">
+                <a class="address-link">
+                    <div class="address_div">
+                        <p class="peopleMessage">
+                            <span class="name">下账</span>
+                            <span class="phone">139****6989</span>
+                        </p>
+                        <p class="addressMessage">陕西省宝鸡市凤翔县问问企鹅13213 </p>
+                    </div>
+                    <span class="address_dir"></span>
+                </a>
+            </div>
+                <img class="xian_rep" src="../css/image/xian.png">
+        </div>
+        <!--支付信息-->
+        <div class="cartBox cart-add-bot">
+            <p class="payMethod"><a>在线支付</a>选择支付方式</p>
+            <p class="bill"><a onclick="showOrHide(1)">不要发票</a>发票信息</p>
+        </div>
+
+        <div class="cartBox">
+            <div class="payMethod">
+                <a href="#" class="ord-coupon">10.00</a>
+                <a href="#" class="default-col" style="display: none">无可用</a>优惠券
+                <span class="cou_num"><i>2</i>张可用</span>
+            </div>
+            <div class="payMethod">
+                <a href="#" class="default-col">无可用</a>礼品卡<span class="cou_num"><i>0</i>张可用</span>
+            </div>
+            <div class="integral">
+                <a href="#" class="default-col" style="display: none">未使用</a>积分
+                <a href="#" class=" ord-red-font">2.00</a>
+                <input class="ord-Integral" type="text" placeholder="共有1804个优德积分，本次可用200个积分">
+            </div>
+
+        </div>
+
+        <!--多商品缩略图-->
+        <div class="baoTit clearfix" style="display: block">
+            <a><img src="../css/image/threeTu.jpg"></a>
+            <a><img src="../css/image/threeTu.jpg"></a>
+            <a><img src="../css/image/threeTu.jpg"></a>
+        </div>
+
+
+        <!--商品信息列表-->
+        <ul class="cartList" style="display: none">
+            <li>
+                <div class="displayBox">
+                    <div class="cart1Box">
+                        <a><img src="../css/image/threeTu.jpg"></a>
+                    </div>
+                    <div class="cart2Box">
+                        <p>
+                            创盈 金斯利安多维片 叶酸 B族 多种营养 维生素
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <span class="cart_pri">32.00</span>
+                        <span class="cart_num">1</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="displayBox">
+                    <div class="cart1Box">
+                        <a><img src="../css/image/threeTu.jpg"></a>
+                    </div>
+                    <div class="cart2Box">
+                        <p>
+                            创盈 金斯利安多维片 叶酸 B族 多种营养 维生素
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <span class="cart_pri">32.00</span>
+                        <span class="cart_num">1</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="displayBox">
+                    <div class="cart1Box">
+                        <a><img src="../css/image/threeTu.jpg"></a>
+                    </div>
+                    <div class="cart2Box">
+                        <p>
+                            创盈 金斯利安多维片 叶酸 B族 多种营养 维生素
+                        </p>
+                    </div>
+                    <div class="cart_price">
+                        <span class="cart_pri">32.00</span>
+                        <span class="cart_num">1</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!--商品价钱-->
+        <div class="cartBox3">
+            <ul class="goodsMoney">
+                <li>
+                    <span class="redPrice"> 1050.00</span>商品金额
+                </li>
+                <li>
+                    <span class="fareMoney"> 8.00</span>运费
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+<!--底部-->
+<div class="ord-commit">
+    <a class="red_btn">提交订单</a>实付金额：
+    <span class="total-Money"> 3825.00</span>
+</div>
+
+ <!--支付方式弹出层-->
+<div class="payType"  style="display: none">
+    <ul class="invoiceType">
+        <li>
+            <p>选择支付方式</p>
+            <a class="sback">
+                <img src="../css/image/clos.png">
+            </a>
+            <div>
+                <label class="active">在线支付</label>
+                <label>货到付款</label>
+            </div>
+        </li>
+    </ul>
+    <div class="conBut"><a href="#">确认</a></div>
+</div>
+
+<!--发票信息弹出层-->
+<div class="invoice" id="top" style="display: none">
+    <ul class="invoiceType">
+        <li>
+            <p>发票信息</p>
+            <a class="sback">
+                <img src="../css/image/clos.png">
+            </a>
+            <div>
+                <label>不要发票</label>
+                <label>普通发票</label>
+                <label class="active">增值发票</label>
+            </div>
+        </li>
+    </ul>
+    <!--增值发票-->
+    <div class="addInvoice" style="display: block">
+        <div class="invoiceInfo">
+            <span>单位名称：</span>
+            <input type="text" maxlength="20">
+        </div>
+        <div class="invoiceInfo">
+            <span>纳税人识别码：</span>
+            <input type="text" maxlength="20">
+        </div>
+        <div class="invoiceInfo">
+            <span>注册地址：</span>
+            <input type="text" maxlength="20">
+        </div>
+        <div class="invoiceInfo">
+            <span>注册电话：</span>
+            <input type="text" maxlength="12">
+        </div>
+        <div class="invoiceInfo">
+            <span>银行账户：</span>
+            <input type="text" maxlength="19">
+        </div>
+    </div>
+    <!--普通发票-->
+    <div class="addInvoice bus-Info" style="display: none">
+        <div class="shop">
+            <div class="personal">
+                <input type="checkbox" id="personal">
+                <label for="personal">个人</label>
+            </div>
+
+            <div class="personal">
+                <input checked type="checkbox" id="business">
+                <label for="business">企业</label>
+            </div>
+        </div>
+        <div class="business">
+            <input placeholder="请填写企业名称" type="text" maxlength="30">
+        </div>
+    </div>
+
+    <div class="conBut"><a href="#">确认</a></div>
+
+</div>
+
+<!--礼品卡弹出层-->
+    <div class="invoice" style="display: none">
+        <ul class="giftCard">
+            <li>
+                <p>礼品卡</p>
+                <a class="sback">
+                    <img src="../css/image/clos.png">
+                </a>
+            </li>
+            <div class="giftId">
+                <input placeholder="请输入您的礼品卡密码" type="text" maxlength="30">
+            </div>
+            <span class="use_warn" style="display: block">该礼品卡已过期！</span>
+            <span class="use_warn" style="display: none">该礼品卡不存在！</span>
+            <span class="use_warn" style="display: none">该礼品卡已使用！</span>
+            <span class="use_warn" style="display: none">该礼品卡不满足使用条件！</span>
+            <span class="use_warn" style="display: none">该礼品卡满<i>100</i>减<i>10</i>元！</span>
+        </ul>
+        <div class="use_bot_btn" style="display: none">
+            <input type="button" class="gift-use" value="使用">
+        </div>
+        <div class="use_chan_btn">
+            <input type="button" class="gift-no-use" value="不使用礼品卡">
+            <input type="button" class="gift-change" value="更改礼品卡">
+        </div>
+    </div>
+</div>
+<!--使用优惠券-->
+<div class="use-cou-box" style="display: none">
+    <header class="cateHeader">
+        <div class="search_back"></div>
+        <a class="goodCate">使用优惠券</a>
+    </header>
+        <div class="out-cou-div">
+            <ul class="out-cou-ul">
+                <li class="active"><a>可用优惠券<span>(3)</span></a></li>
+                <li class=""><a>不可用优惠券<span>(1)</span></a></li>
+            </ul>
+            <div class="clear"></div>
+            <!--可用优惠券-->
+            <div class="use_first_tab" style="display: block">
+                 <div class="usable-cou">
+                    <div class="sel-cou">
+                        <input type="checkbox" id="usable1" checked="">
+                        <label for="usable1">check</label>
+                    </div>
+
+                     <div class="rig-sel-cou">
+                         <p class="dis-count">满<i>100</i>元减<i>10</i>元</p>
+                         <p class="end-date">有效期至<span>2016-9-9 18:00:00</span></p>
+                     </div>
+                 </div>
+                 <div class="usable-cou">
+                    <div class="sel-cou">
+                        <input type="checkbox" id="usable2">
+                        <label for="usable2">check</label>
+                    </div>
+
+                    <div class="rig-sel-cou">
+                        <p class="dis-count">满<i>100</i>元减<i>10</i>元</p>
+                        <p class="end-date">有效期至<span>2016-9-9 18:00:00</span></p>
+                    </div>
+                </div>
+                 <div class="usable-cou">
+                    <div class="sel-cou">
+                        <input type="checkbox" id="usable3">
+                        <label for="usable3">check</label>
+                    </div>
+
+                    <div class="rig-sel-cou">
+                        <p class="dis-count">满<i>100</i>元减<i>10</i>元</p>
+                        <p class="end-date">有效期至<span>2016-9-9 18:00:00</span></p>
+                    </div>
+                </div>
+                 <div class="use-con-btn">
+                    <a href="#">确认</a>
+                </div>
+            </div>
+            <!--不可用优惠券-->
+            <div class="use_second_tab" style="display: none ">
+                <div class="disable-cou">
+                    <div class="rig-sel-cou">
+                        <p class="dis-count">满<i>100</i>元减<i>10</i>元</p>
+                        <p class="end-date">有效期至<span>2016-9-9 18:00:00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!--货到付款---提交订单-->
+<div style="display: block">
+    <header class="cateHeader">
+        <div class="search_back"></div>
+        <a class="goodCate">提交订单</a>
+    </header>
+
+    <div class="complete-ord">
+        <div class="com-dialog-com">
+            <p class="appDio">提交成功</p>
+        </div>
+        <div class="ord-fin-suc">
+            <p><label>订单编号：</label><span>20160810171525</span></p>
+            <p><label>定单金额：</label><i class="ord_pay">35.00</i></p>
+            <p><label>支付方式：</label><span>货到付款</span></p>
+            <p>本次可获得：<i>200</i>积分,<i>1</i>张优惠券</p>
+        </div>
+    </div>
+
+    <div class="submit_ord_btn">
+        <a class="look_ord" href="#">查看订单</a>
+        <a class="goBuy" href="#">继续购物</a>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!--遮罩层-->
+<div id="below" class="belowdiv" style="display: none;"></div>
+
+</body>
+</html>

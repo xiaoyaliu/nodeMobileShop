@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+    <style>
+        .u-flyer{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            opacity: 1;
+            z-index: 500;
+        }
+    </style>
+    <script src="../js/ext/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+/*        var nowobj=null;
+        function setBGC(obj){
+            if(nowobj!=null){
+                nowobj.style.backgroundColor = " ";
+            }
+            obj.style.backgroundColor = "#f9f9f9";
+            nowobj = obj;
+        }*/
+       function setBGC(obj){
+            obj.style.backgroundColor = "#f9f9f9";
+        }
+
+function moveBox(obj) {
+    var that=$(obj)
+    var flyDiv=that.parents("li").find("[data-role=img]");
+    var divTop = that.offset().top-10;
+    var divLeft = that.offset().left-6;
+    var img = flyDiv.attr('src');
+    var flyer = $('<img class="u-flyer" src="'+img+'">');
+    var end=$(".shopcar_s");
+    var endLeft=parseFloat(end.offset().left)+10;
+    var endTop=end.offset().top;
+    $("body").append(flyer);
+    $(".u-flyer").css({
+        "left": divLeft + "px",
+        "top": divTop+ "px" });
+       $(".u-flyer").animate({ "left": endLeft + "px", "top": endTop + "px","width":"20px","height":"20px" }, 500,function(){
+           $(".u-flyer").remove();
+       });
+}
+    </script>
+</head>
+<body>
+
+<div class="container_s">
+    <!--搜索条-->
+    <div class="header-sea">
+        <div class="search_back" >
+        </div>
+        <div class="searchGoods_txt">
+            <div>
+                <input type="text"  class="search_pro" value="" placeholder="小儿感冒药" >
+            </div>
+            <div class="shop_car">
+                <a class="shopcar_s">
+                    <i class="shopcar_num">10</i>
+                    <img src="../css/image/shop.png">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--tab-->
+    <div class="search-list">
+        <div class="tabOorderBy">
+            <ul class="tabThree clearfix">
+                <li class="orderBy1 active" style="float: left"><a><span class="span1">综合</span></a></li>
+                <li class="orderBy2" style="text-align: center"><a><span>销量</span></a></li>
+                <li class="orderBy3" style="float: right;"><a><span class="up down">价格</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--tab_result-->
+    <div class="tab_result">
+        <ul class="listResult">
+            <li onclick="setBGC(this)">
+                <a>
+                    <div class="resultShow">
+                        <div class="resultLeft">
+                            <div class="resultBorder">
+                                <img data-role="img" src="../css/image/sr1.jpg">
+                            </div>
+                        </div>
+                        <div class="resultRight">
+                            <p class="rowP1">鼻塞流涕咽痛三九牌感冒灵颗粒暖的很贴心9袋*10g</p>
+                            <div class="rowP2">
+                                <span class="row2Span1"><i>¥</i>35.50</span>
+                                <span class="original-price">¥249.0</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="cart" onclick="moveBox(this)"></div>
+            </li >
+            <li onclick="setBGC(this)">
+                <a>
+                    <div class="resultShow">
+                        <div class="resultLeft">
+                            <div class="resultBorder">
+                                <img data-role="img" src="../css/image/sr2.jpg">
+                            </div>
+                        </div>
+                        <div class="resultRight">
+                            <p class="rowP1">鼻塞流涕咽痛三九牌感冒灵颗粒暖的很贴心9袋*10g</p>
+                            <div class="rowP2">
+                                <span class="row2Span1"><i>¥</i>35.50</span>
+                                <span class="original-price">¥249.0</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="cart" onclick="moveBox(this)"></div>
+            </li>
+            <li onclick="setBGC(this)">
+                <a>
+                    <div class="resultShow">
+                        <div class="resultLeft">
+                            <div class="resultBorder">
+                                <img data-role="img" src="../css/image/sr1.jpg">
+                            </div>
+                        </div>
+                        <div class="resultRight">
+                            <p class="rowP1">鼻塞流涕咽痛三九牌感冒灵颗粒暖的很贴心9袋*10g</p>
+                            <div class="rowP2">
+                                <span class="row2Span1"><i>¥</i>35.50</span>
+                                <span class="original-price">¥249.0</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="cart" onclick="moveBox(this)"></div>
+            </li>
+            <li onclick="setBGC(this)">
+                <a>
+                    <div class="resultShow">
+                        <div class="resultLeft">
+                            <div class="resultBorder">
+                                <img data-role="img" src="../css/image/sr2.jpg">
+                            </div>
+                        </div>
+                        <div class="resultRight">
+                            <p class="rowP1">鼻塞流涕咽痛三九牌感冒灵颗粒暖的很贴心9袋*10g</p>
+                            <div class="rowP2">
+                                <span class="row2Span1"><i>¥</i>35.50</span>
+                                <span class="original-price">¥249.0</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="cart" onclick="moveBox(this)"></div>
+            </li>
+            <li onclick="setBGC(this)">
+                <a>
+                    <div class="resultShow">
+                        <div class="resultLeft">
+                            <div class="resultBorder">
+                                <img data-role="img" src="../css/image/sr1.jpg">
+                            </div>
+                        </div>
+                        <div class="resultRight">
+                            <p class="rowP1">鼻塞流涕咽痛三九牌感冒灵颗粒暖的很贴心9袋*10g</p>
+                            <div class="rowP2">
+                                <span class="row2Span1"><i>¥</i>35.50</span>
+                                <span class="original-price">¥249.0</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="cart" onclick="moveBox(this)"></div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="no-data1">
+        <div class="no-data-content">
+            <p>
+                没有了
+            </p>
+        </div>
+    </div>
+</div>
+</body>

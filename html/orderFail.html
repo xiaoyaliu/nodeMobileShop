@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title">提交订单失败</title>
+      <meta data-attach-point="keywords" name="keywords" content="优德医药网,网上医药商城,河南大药房,保健养生药品,日常用药">
+      <meta data-attach-point="description" name="description" content="优德医药网是河南大药房建设的一家网上药店,网上医药商城专业提供保 健养生药,妇科用药,肠胃药等日常用药,优德医药-让您更健康!">
+      <link rel="stylesheet" type="text/css" href="../src/mobile.min.css"/>
+      <script src="../require.min.js"></script>
+      <script src="../require-config.js"></script>
+</head>
+<body>
+<header class="cateHeader">
+      <div class="search_back" onclick="history.back()"></div>
+      <a class="goodCate">订单支付失败</a>
+      <div class="go-quick-click" id="go-quick-click">
+            <a></a>
+      </div>
+</header>
+<div class="quick-go-div" id="quick-go-div">
+      <ul class="botList">
+            <li>
+                  <a href="/">首页</a>
+            </li>
+            <li>
+                  <a href="/cart">购物车</a>
+            </li>
+            <li>
+                  <a href="/user">用户中心</a>
+            </li>
+            <li>
+                  <a href="logisticsAll">物流查询</a>
+            </li>
+      </ul>
+</div>
+
+<div class="pay_success">
+      <div class="sucInfo">
+            <p class="payFail" >订单支付失败</p>
+      </div>
+      <div class="ope">
+            <a class="goPay" href="/cart">继续购物</a>
+            <div class="clear"></div>
+      </div>
+</div>
+<script>require(['components/orderFail'])</script>
+</body>
+</html>

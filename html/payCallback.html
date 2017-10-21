@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title">支付成功 － 优德</title>
+      <meta data-attach-point="keywords" name="keywords" content="">
+      <meta data-attach-point="description" name="description" content="">
+      <link rel="stylesheet" type="text/css" href="../src/mobile.min.css"/>
+      <script src="../require.min.js"></script>
+      <script src="../require-config.js"></script>
+</head>
+<body>
+<div data-attach-point="data"></div>
+<!--弹出框-->
+<div id="top" class="topdiv">
+      <ul class="clear_his">
+            <li class="tophis tophis2" data-attach-point="tophis"></li>
+            <li>
+                  <span class="cancel" id="cancel"><a>取消</a></span>
+                  <span class="confirm" id="confirm"><a>确定</a></span>
+            </li>
+      </ul>
+</div>
+<!--遮罩层-->
+<div id="below" class="belowdiv" style="display: none"></div>
+<script>require(['components/payCallback'])</script>
+</body>
+</html>

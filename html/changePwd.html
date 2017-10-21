@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title"></title>
+      <meta data-attach-point="keywords" name="keywords" content="">
+      <meta data-attach-point="description" name="description" content="">
+      <link rel="stylesheet" type="text/css" href="src/mobile.min.css"/>
+      <script src="require.min.js"></script>
+      <script src="require-config.js"></script>
+</head>
+<body>
+<!--修改密码-->
+<header class="cateHeader">
+      <div class="search_back" onclick="history.back()"></div>
+      <a class="goodCate">修改密码</a>
+</header>
+<div class="change-pwd-box">
+      <form>
+            <div class="pwd_box">
+                  <div class="old-pwd-box">
+                        <span>原始密码：</span>
+                        <input class="pwd" type="password" maxlength="20"  data-attach-point="opw">
+                  </div>
+                  <div class="old-pwd-box">
+                        <p class="pwd" class="password">新&nbsp;密&nbsp;码&nbsp;：</p>
+                        <input type="password" maxlength="20" data-attach-point="npw">
+                        <div class="button_off_mo" style="display:block" data-attach-point="off"></div>
+                        <div class="button_on_mo" style="display: none" data-attach-point="on"><span>abc</span></div>
+                  </div>
+                  <p class="error_txt" data-attach-point="err"></p>
+                  <p class="pwd-type" >密码由6-20位字母、数字或字符组合</p>
+                  <div class="operate">
+                        <button type="button" class="saveBtn btn-primary btn-block" data-attach-point="btn">保存</button>
+                  </div>
+            </div>
+      </form>
+      <div class="success" data-attach-point="suc" style="display:none;">
+            <h3 class="reg-success">修改成功!</h3>
+      </div>
+</div>
+<script>
+      require(['components/changePwd']);
+</script>
+</body>
+</html>

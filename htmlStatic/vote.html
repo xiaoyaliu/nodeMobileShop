@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>征集令</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/mobile.min.css"/>
+    <script src="require.min.js"></script>
+    <script src="require-config.js"></script>
+</head>
+<body>
+<div class="zjBanner">
+    <img src="image/zhengji_banner_1.jpg" alt="">
+</div>
+<div class="imgCont">
+    <br/>
+    <img src="image/zhengji_banner_2.jpg" alt="">
+    <img src="image/zhengji_banner_3.jpg" alt="">
+    <br/>
+    <img src="image/zhengji_banner_4.jpg" alt="">
+    <img src="image/zhengji_banner_5.jpg" alt="">
+</div>
+<div class="zjFormWrap">
+    <div class="zjForm">
+        <h3>优德吉祥物征名活动（报名表）</h3>
+        <div class="dotted">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>
+                <label>吉祥物征名：</label>
+                <input type="text" placeholder="请输入吉祥物名称" data-attach-point="mascotName">
+            </li>
+            <li>
+                <label>报名者姓名：</label>
+                <input type="text" placeholder="请输入您的姓名" data-attach-point="userName">
+            </li>
+            <li>
+                <label>报名者电话：</label>
+                <input type="text" placeholder="请输入您的电话" data-attach-point="mobile">
+            </li>
+            <li>
+                <input type="button" value="立即提交" class="submitBtn" onclick="submitForm();">
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="zjLingTips" data-attach-point="tips"></div>
+<script>
+    require(['components/vote']);
+</script>
+</body>
+</html>

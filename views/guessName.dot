@@ -1,0 +1,7 @@
+{{~it:item}}
+   <li class="nameListLi">
+        <span><img src="{{=item.wxImage}}" alt=""></span>
+        <span>{{=item.wxName}}</span>
+        <span>{{=item.award}}</span>
+   </li>
+{{~}}

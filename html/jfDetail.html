@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="/src/mobile.css"/>
+    <link rel="stylesheet" type="text/css" href="/src/swiper.min.css"/>
+    <title data-attach-point="title"></title>
+    <script src="/require.min.js"></script>
+    <script src="/require-config.js"></script>
+</head>
+<body>
+<header class="cateHeader">
+    <div class="search_back" onclick="window.history.back()"></div>
+    <a class="goodCate">基本资料</a>
+</header>
+<div class="jfDetailCont" data-attach-point="master">
+
+</div>
+
+<div class="jfDetail-img" style="display: none;">
+    <p><img src="../css/image/tuwen.jpg" alt=""></p>
+    <p><img src="../css/image/tuwen.jpg" alt=""></p>
+    <p><img src="../css/image/tuwen.jpg" alt=""></p>
+    <p><img src="../css/image/tuwen.jpg" alt=""></p>
+</div>
+
+<div class="jfDetailFooter" data-attach-point="submit">立即兑换</div>
+<!--弹出框-->
+<div id="top" class="topdiv">
+    <ul class="clear_his">
+        <li class="tophis" data-attach-point="tophis"></li>
+        <li>
+            <span class="cancel" id="cancel"><a>取消</a></span>
+            <span class="confirm" id="confirm"><a>确定</a></span>
+        </li>
+    </ul>
+</div>
+<!--遮罩层-->
+<div id="below" class="belowdiv"></div>
+</body>
+<script>
+    require(['components/jfDetail']);
+</script>
+</html>

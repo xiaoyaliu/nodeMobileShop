@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+
+</head>
+<body>
+<div class="container_s">
+    <!--搜索条-->
+    <div class="header-s">
+        <div class="search_back" >
+        </div>
+        <div class="searchGoods_txt">
+            <div>
+                <input type="text"  class="search_pro" value="" placeholder="小儿感冒药" >
+            </div>
+            <div class="shop_car">
+                <a class="shopcar_s">
+                    <i class="shopcar_num">10</i>
+                    <img src="../css/image/shop.png">
+                </a>
+            </div>
+        </div>
+    </div>
+<!--tab-->
+    <div class="search-list">
+        <div class="tabOorderBy">
+            <ul class="tab">
+                <li class="orderBy1 active" style="float: left"><a><span class="span1">综合</span></a></li>
+                <li class="orderBy2" style="text-align: center"><a><span>销量</span></a></li>
+                <li class="orderBy3" style="float: right;"><a><span class="up down">价格</span></a></li>
+            </ul>
+        </div>
+        <div class="middle">
+            <div class="top">
+                <div style="clear: both;"></div>
+                <div class="content">
+                    <img src="../css/image/bb.png" style="width: 90px"><br>
+                    <img style="margin-top: -8px; width: 100px" src="../css/image/gg.png" >
+                    <p class="sorry">很抱歉，没有找到相关的信息！</p>
+                </div>
+            </div>
+            <div class="middle">
+                <p class="dj">您可以填写需求登记</p>
+                <form id="needMessageForm">
+                    <ul class="needMessage">
+                        <li class="Info">
+                            <label class="requireWrite">药品名称</label>
+                            <input type="text" name="drugname" autocomplete="off" class="drugsName">
+                            <a class="icon-close-input1" style="display: none"></a>
+                        </li>
+                        <li class="Info">
+                            <label  class="requireWrite">药品规格</label>
+                            <input type="text" name="druggg" autocomplete="off" class="drugsBit">
+                            <a class="icon-close-input2" style="display: none"></a>
+                        </li>
+                        <li class="Info">
+                            <label  class="requireWrite">药品数量</label>
+                            <input type="text" name="drugnum" autocomplete="off" class="drugsNum">
+                            <a class="icon-close-input3" style="display: none"></a>
+                        </li>
+                        <li class="Info">
+                            <label class="requireWrite">手机号码</label>
+                            <input type="text"  name="mobile" class="right redBor">
+                            <a class="icon-close-input4" style="display: none"></a>
+                        </li>
+                        <!-- 提示 -->
+                        <div class="infoT txt-err" style="display: block">请填写有效的手机号码</div>
+
+                        <li class="beizhu">
+                            <label class="labelLeft">备&nbsp;&nbsp;注</label>
+                            <textarea rows="7" cols="37" name="writeBei" class="writeBei"></textarea>
+                        </li>
+                        <li>
+                            <p class="zx">如紧急，请拨打<a class="phone" style="text-decoration: none">4008-606-111</a>咨询</p>
+                        </li>
+                        <li class="call">
+                            <p class="btn-p"><input class="btn" name="button" type="button" value="电话咨询"><input class="isubmit-addr2"  name="submit" type="button" value="提交"></p>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+
+        <div class="dialog" style="display: block">
+            <a class="diaInfo">提交信息成功</a>
+        </div>
+
+    </div>
+</div>
+    </body>
+</html>

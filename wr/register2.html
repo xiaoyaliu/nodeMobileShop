@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+</head>
+<body>
+<header class="cateHeader">
+    <div class="search_back"></div>
+    <a class="goodCate">注册</a>
+</header>
+
+<!--注册信息-->
+    <div class="insertBox">
+
+     <!--第一步-->
+        <div style="display: block">
+            <form>
+                <div class="newAddress">
+                    <div class="address">
+                        <span>手机号：</span>
+                        <input type="text" maxlength="11" class="telephone">
+                        <i class="validate-tel"></i>
+                    </div>
+                    <p class="message-error" style="display: block;">手机号码不能为空</p>
+                    <div class="address">
+                        <span>验证码：</span>
+                        <input type="text" class="PIN" maxlength="4">
+                        <i class="validate-Pin"></i>
+                        <i class="bor-left"></i>
+                        <button class="sendPin gray-but" disabled="disabled">发送验证码</button>
+                    </div>
+                </div>
+
+                <div class="operate">
+                    <button type="button" class="saveBtn btn-primary btn-block">下一步</button>
+                </div>
+            </form>
+        </div>
+<!--下一步-->
+        <div style="display: none">
+            <form>
+                <div class="newAddress">
+                    <div class="address">
+                        <p>136****3347</p>
+                    </div>
+                    <div class="address">
+                        <p class="password">密&nbsp;&nbsp; 码&nbsp;：</p>
+                        <input type="password" maxlength="20">
+                        <div class="button_on_mo" style="display: block"><span>abc</span></div>
+                        <div class="button_off_mo" style="display:none" ></div>
+                    </div>
+                    <p class="password-error" style="display: block;">请输入密码</p>
+                </div>
+
+                <div class="select-check agreement">
+                    <input type="checkbox" checked>
+                    <label>同意
+                        <a>《优德医药网用户注册协议》</a>
+                    </label>
+                </div>
+
+                <div class="operate">
+                    <button type="button" class="saveBtn btn-primary btn-block">立即注册</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

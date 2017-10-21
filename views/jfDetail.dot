@@ -1,0 +1,50 @@
+    <div class="detail-img">
+
+         <div class="swiper-container">
+            <div class="swiper-wrapper">
+            {{? it.picArr==""}}
+            <div class="swiper-slide">
+                <img src="/image/like3.jpg" alt="">
+            </div>
+            {{??}}
+               {{~ it.picArr:item}}
+                   <div class="swiper-slide">
+                      <img src="{{=item.img_url}}" alt="">
+                   </div>
+               {{~}}
+            {{?}}
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+         </div>
+    </div>
+    <p style="height:10px;background-color:#F2F2F2;"></p>
+    <div class="detail-section">
+        <p class="sec-title">{{=it.info.goods_name}}</p>
+        <p class="sec-pace">
+            <i><img src="/image/jf.png" alt=""></i>
+            <span class="redJf">{{=it.info.integral_num}}</span>
+            <del>市场价￥<span>{{=it.info.shop_price}}</span></del>
+        </p>
+        <p class="sec-rule">产品规格：<span>{{=it.info.standard}}</span></p>
+        <p class="sec-rule">生产厂家：<span>{{=it.info.manufacturer}}</span></p>
+    </div>
+    <div class="watchDetail" data-attach-point="detailImg">查看详情</div>
+
+    <div data-attach-point="detailImgCont" style="display:none" id="detailImgCont">
+        <header class="cateHeader cateHeader2">
+            <div class="search_back" data-attach-point="detailImgBack"></div>
+            <a class="goodCate">详细资料</a>
+        </header>
+        <div class="detailImg">
+         {{? it.goodsPic.goods_desc==null||it.goodsPic.goods_desc==""}}
+            <p style="text-align:center;margin-top:10px;">暂无详情</p>
+         {{??}}
+            {{~it.goodsPic.goods_desc:item}}
+                <img src="{{=item}}">
+            {{~}}
+         {{?}}
+        </div>
+    </div>
+
+    <input  type="hidden" value="{{=it.info.goods_id}}" data-attach-point="goodsId"/>

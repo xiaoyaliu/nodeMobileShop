@@ -1,0 +1,49 @@
+<!--头部-->
+<header class="cateHeader">
+    <a class="go_back"  href="/"></a>
+    <div class="goodCate">全部分类</div>
+     <div class="go-quick-click" id="go-quick-click">
+                       <a></a>
+                 </div>
+       </header>
+       <div class="quick-go-div" id="quick-go-div">
+             <ul class="botList">
+                   <li>
+                         <a href="/">首页</a>
+                   </li>
+                   <li>
+                         <a href="/cart">购物车</a>
+                   </li>
+                   <li>
+                         <a href="/user">用户中心</a>
+                   </li>
+                   <li>
+                         <a href="/logisticsAll">物流查询</a>
+                   </li>
+             </ul>
+       </div>
+<div class="allCate">
+    <div class="cate_box">
+        <!--分类列表-->
+        <ul class="left_cate">
+            {{~ it.info_left:item:index}}
+                {{? index===0}}
+                    <li m_index={{=index}} class="current" id="{{=item.cat_id}}" data-attach-point="sf">{{=item.cat_name}}</li>
+                {{??}}
+                    <li m_index={{=index}} id="{{=item.cat_id}}" data-attach-point="sf">{{=item.cat_name}}</li>
+                {{?}}
+            {{~}}
+        </ul>
+        <div class="right_cate" data-attach-point="tl">
+            <div class="cate_third_pro"> <img src="image/topcate.jpg"> </div>
+            <div class="sp_container"style="display: block">
+                <ul class="right_ul">
+                {{~ it.info_right.categorylist:item}}
+                    <li> <a href="/classify/{{=item.cat_id}}"><img src="{{=item.images}}" ><span>{{=item.cat_name}}</span></a></li>
+                {{~}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

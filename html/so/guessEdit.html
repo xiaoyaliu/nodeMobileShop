@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>优德之夜·热歌榜中榜音乐盛典</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../src/mobile.css"/>
+    <script src="../require.min.js"></script>
+    <script src="../require-config.js"></script>
+</head>
+<body  class="guessRule">
+<section>
+    <marquee  direction=left  class="marq">中奖后未能成功提交收货地址，请及时联系优德医药网客服，祝您中奖！</marquee>
+    <div></div>
+    <header><img src="../image/guessRuleHeader.jpg" alt=""></header>
+    <div class="guessRuleSet guessEditSet">
+        <div class="guessRuleCont guessEdit">
+            <h3 class="guessEditCon">恭喜您!</h3>
+            <p data-attach-point="mp"></p>
+            <p>请填写您的收货信息，工作人员会尽快与您联系寄出奖品， 请保持电话畅通，感谢您的参与。</p>
+            <div class="guessEditAddr">
+                <p><span class="editSpan">姓名:</span><input class="editInput" data-attach-point="name" type="text"></p>
+                <p><span class="editSpan">电话:</span><input class="editInput" data-attach-point="tel" type="text"></p>
+                <p><span class="editSpan">地区:</span>
+                    <span class="editInput">
+                        <select id="province"><option>选择省</option></select>
+                        <select id="city"><option>选择市</option></select>
+                        <select id="area"><option>选择区</option></select>
+                    </span>
+                </p>
+                <p><span class="editSpan">详细地址:</span><input class="editInput" data-attach-point="delAddr" type="text"></p>
+            </div>
+        </div>
+    </div>
+    <button class="takePart guessEditPart" onclick="guessSubmit()">确认信息无误并提交</button>
+</section>
+<input type="hidden" data-attach-point="pid" value="">
+<input type="hidden" data-attach-point="unid" value="">
+<!--提示框-->
+<div class="dialog dialog2" style="display: none">
+    <a class="diaInfo"></a>
+</div>
+<!--loading-->
+<div class="guess-loading" data-attach-point="load"><img src="../image/loading.gif" alt=""></div>
+<!--遮罩层-->
+<div id="below" class="belowdiv"></div>
+</body>
+<script>require(['components/guessEdit'])</script>
+</html>

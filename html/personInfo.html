@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <title data-attach-point="title">个人信息</title>
+    <meta data-attach-point="keywords" name="keywords" content="">
+    <meta data-attach-point="description" name="description" content="">
+    <link rel="stylesheet" type="text/css" href="src/mobile.min.css"/>
+    <link rel="stylesheet" type="text/css" href="src/mobiscroll.min.css"/>
+    <script src="require.min.js"></script>
+    <script src="require-config.js"></script>
+</head>
+<body>
+<!--个人信息-->
+<div data-attach-point="mt">
+    <header class="cateHeader">
+        <div class="search_back" data-attach-point="sb"></div>
+        <a class="goodCate">个人信息</a>
+    </header>
+    <div data-attach-point="mst"></div>
+</div>
+<!--用户名-->
+<div data-attach-point="ufo" style="display: none;height: 100%">
+    <header class="cateHeader">
+        <div class="search_back" data-attach-point="ufogo"></div>
+        <a class="goodCate">用户名</a>
+        <div class="go_save">
+            <a class="save-color" data-attach-point="suid">确定</a>
+        </div>
+    </header>
+    <div class="username-div">
+        <div class="username-box">
+            <input type="text" placeholder="请输入你的用户名(仅能修改一次)" maxlength="30" data-attach-point="uname">
+        </div>
+    </div>
+</div>
+<!--姓名-->
+<div data-attach-point="nm" style="display: none;height: 100%">
+    <header class="cateHeader">
+        <div class="search_back" data-attach-point="nmgo"></div>
+        <a class="goodCate">姓名</a>
+        <div class="go_save">
+            <a class="save-color" data-attach-point="nmok">确认</a>
+        </div>
+    </header>
+
+    <div class="name-div">
+        <div class="name-box">
+            <input type="text" placeholder="请输入你的姓名" maxlength="4" data-attach-point="nmvl">
+        </div>
+    </div>
+</div>
+
+
+<!--是否过敏-->
+<div data-attach-point="allergy" style="display: none;height: 100%">
+    <header class="cateHeader">
+        <div class="search_back" data-attach-point="alyok"></div>
+        <a class="goodCate">是否用药过敏</a>
+        <div class="go_save">
+            <a class="save-color" data-attach-point="alyok">确认</a>
+        </div>
+    </header>
+
+    <div class="allergy-div">
+        <ul>
+            <li data-attach-point="so">
+                <input type="radio" name="sex" id="no" value="0"/>
+                <label for="no">否</label>
+            </li>
+            <li data-attach-point="so">
+                <input type="radio"  name="sex" id="yes" value="1"/>
+                <label for="yes">是</label>
+            </li>
+        </ul>
+        <div class="allergy-text"  data-attach-point="txt">
+            <textarea class="common-input" name="content" maxlength="200" placeholder="请输入用药过敏情况"></textarea>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--选择头像弹出层-->
+<div class="pho-bot" id="top"  style="display:none;">
+    <div class="choose-photo">
+        <ul>
+            <li>
+                <a>拍照</a>
+            </li>
+            <li>
+                <a>相册中选择</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="photo-can">
+        <a>取消</a>
+    </div>
+
+</div>
+<!--选择性别弹出层-->
+<div class="pho-bot"  style="display:none;" data-attach-point="sex">
+    <div class="choose-photo">
+        <ul>
+            <li flag="1" data-attach-point="choose">
+                <a>男</a>
+            </li>
+            <li  flag="2" data-attach-point="choose">
+                <a>女</a>
+            </li>
+            <li  flag="0" data-attach-point="choose">
+                <a>保密</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="photo-can">
+        <a data-attach-point="cl">取消</a>
+    </div>
+
+</div>
+<!--选择家族病史弹出框-->
+<div class="pho-bot"  style="display:none;" data-attach-point="history">
+<header class="cateHeader">
+    <div class="search_back" data-attach-point="his-sure"></div>
+    <a class="goodCate">病史/家族病史</a>
+    <div class="go_save">
+        <a class="save-color gray-fon" data-attach-point="his-sure">确认</a>
+    </div>
+</header>
+<!--病史选项-->
+<div class="hist-choice">
+    <p>病史/家族史选项(可多选)：</p>
+    <p class="all-choose" data-attach-point="disease-choose">
+        <a class="active">乙肝<em></em></a>
+        <a>胃癌</a>
+        <a>糖尿病</a>
+        <a class="active"><em></em>心脏病</a>
+        <a>青光眼</a>
+        <a>视力差</a>
+        <a>皮肤癌</a>
+        <a class="active"><em></em>中耳炎</a>
+
+    </p>
+</div>
+
+<div class="fam-text">
+    <textarea class="common-input" name="content" data-attach-point="other-details" maxlength="200" placeholder="请输入你的病史/家族史情况"></textarea>
+</div>
+</div>
+<!--日期弹出层-->
+<div class="data-bot"  style="display:none;" data-attach-point="dataBot">
+    <div class="data-select">
+        <div class="data-sel clearfix">
+            <p>
+                <a class="data-no">取消</a>
+                <a class="data-yes">确定</a>
+            </p>
+        </div>
+        <ul>
+            <li class="clearfix">
+                <span>2013</span>
+                <span>01</span>
+                <span>01</span>
+            </li>
+            <li>
+                <span>2013</span>
+                <span>01</span>
+                <span>01</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--遮罩层-->
+<div id="below" class="belowdiv" style="display: none;"></div>
+<!--提示框-->
+<div class="dialog" style="display: none">
+    <a class="diaInfo"></a>
+</div>
+
+</body>
+<script>require(['components/personInfo']);</script>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+    <script type="text/javascript">
+        function showOrHide(flag) {
+            if(flag == 1) {
+                document.getElementById("top").style.display = "block";
+                document.getElementById("below").style.display = "block";
+            }
+            if(flag == 2) {
+                document.getElementById("top").style.display = "none";
+                document.getElementById("below").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<!--浏览记录-->
+<header class="cateHeader">
+    <div class="search_back"></div>
+    <a class="goodCate">浏览记录</a>
+    <div class="go-quick-click">
+        <a></a>
+    </div>
+</header>
+
+<!--无浏览记录-->
+<div class="no-visit" style="display: none">
+    <div class="empty_visit taCenter">
+        <div class="img_visit">
+            <img src="../css/image/none.png">
+        </div>
+        <p>还没有相关信息</p>
+        <div class="go_home"><a href="javascript:void(0);" class="bule_btn">去逛逛</a></div>
+    </div>
+</div>
+<!--浏览记录信息-->
+    <div class="clear-brow-box" style="display: block">
+        <div class="browse-Info-box">
+            <div class="brow-tit">
+                <a></a>
+                <p>优德医药网</p>
+            </div>
+            <div class="brow_cont">
+                <div class="brow-cont-img">
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                </div>
+                <div class="brow-con-name">
+                    <p>
+                        创盈 金斯利安多维片 叶酸 B族 多种营养 维生素
+                    </p>
+                </div>
+
+            </div>
+            <div class="brow-allPrice">
+                <p>
+                    价格：
+                    <span class="total-price"> 260.00</span>
+                </p>
+                <a class="brow_btn">立即购买</a>
+            </div>
+            <p class="bot-gray"></p>
+        </div>
+        <div class="browse-Info-box">
+            <div class="brow-tit">
+                <a></a>
+                <p>优德医药网</p>
+            </div>
+            <div class="brow_cont">
+                <div class="brow-cont-img">
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                </div>
+                <div class="brow-con-name">
+                    <p>
+                        创盈 金斯利安多维片 叶酸 B族 多种营养 维生素
+                    </p>
+                </div>
+
+            </div>
+            <div class="brow-allPrice">
+                <p>
+                    价格：
+                    <span class="total-price"> 260.00</span>
+                </p>
+                <a class="brow_btn">立即购买</a>
+            </div>
+
+        </div>
+        <p class="bot-gray"></p>
+        <div class="browse-Info-box">
+            <div class="brow-tit">
+                <a></a>
+                <p>优德医药网</p>
+            </div>
+            <div class="brow_cont">
+                <div class="brow-cont-img">
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                </div>
+                <div class="brow-con-name">
+                    <p>
+                        创盈 金斯利安多维片 叶酸 B族 多种营养 维生素
+                    </p>
+                </div>
+
+            </div>
+            <div class="brow-allPrice">
+                <p>
+                    价格：
+                    <span class="total-price"> 260.00</span>
+                </p>
+                <a class="brow_btn">立即购买</a>
+            </div>
+
+        </div>
+        <p class="bot-gray"></p>
+    <!--清空浏览记录-->
+        <div class="clear-brow">
+            <p class="clear-brow-btn clear-brow-list" onclick="showOrHide(1)">清空浏览记录</p>
+        </div>
+    </div>
+    <!--弹出层-->
+    <div id="top" class="topdiv">
+        <ul class="clear_his">
+            <li class="tophis">是否清空浏览记录</li>
+            <li>
+                <span class="cancel"><a>取消</a></span>
+                <span class="confirm"><a>确定</a></span>
+            </li>
+        </ul>
+    </div>
+    <!--遮罩层-->
+    <div id="below" class="belowdiv"></div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="src/mobile.css"/>
+    <title data-attach-point="title"></title>
+    <script src="require.min.js"></script>
+    <script src="require-config.js"></script>
+</head>
+<body class="activity-inte"  data-attach-point="acCont">
+<header class="cateHeader">
+    <div class="search_back" onclick="window.location.href='/'"></div>
+    <a class="goodCate">积分商城</a>
+</header>
+<!--订单状态-->
+<ul class="acList">
+    <li>
+        <a class="tabList"><img src="image/jf.png" alt="">积分:<i class="cr" data-attach-point="jfNumber"></i></a>
+    </li>
+    <li class="acList-2">
+        <a class="tabList" href="/jfRecord"><img src="image/dhjl.png" alt="">兑换记录</a>
+    </li>
+    <li>
+        <a class="tabList" href="/jfRule"><img src="image/jfgz.png" alt="">兑换规则</a>
+    </li>
+</ul>
+<div style="clear: both;"></div>
+<p class="vipCont clearfix">会员兑换专区</p>
+<div class="ac-cont" data-attach-point="jfVipCont">
+    <!-- 会员兑换专区列表 -->
+
+</div>
+<div class="bottom-to-top"  style="display: none" data-attach-point="returnTop">
+    <img src="image/big.png" style="width: 100%">
+</div>
+<div class="noData" style="display:none" data-attach-point="none">
+    <p>已经没有啦，别处看看吧</p>
+</div>
+<!--弹出框-->
+<div id="top" class="topdiv">
+    <ul class="clear_his">
+        <li class="tophis" data-attach-point="tophis"></li>
+        <li>
+            <span class="cancel" id="cancel"><a>取消</a></span>
+            <span class="confirm" id="confirm"><a>确定</a></span>
+        </li>
+    </ul>
+</div>
+<!--遮罩层-->
+<div id="below" class="belowdiv"></div>
+</body>
+<script>
+    require(['components/jfActivity']);
+</script>
+</html>

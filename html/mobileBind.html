@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta name="viewport"
+            content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title"></title>
+      <meta data-attach-point="keywords" name="keywords" content="">
+      <meta data-attach-point="description" name="description" content="">
+      <link rel="stylesheet" type="text/css" href="src/mobile.min.css"/>
+      <script src="require.min.js"></script>
+      <script src="require-config.js"></script>
+</head>
+<body>
+<div data-attach-point="tab1" style="display: none">
+      <!--绑定手机-->
+      <div class="bind_phone" style="display: block">
+            <header class="cateHeader">
+                  <div class="search_back" onclick="history.back()"></div>
+                  <a class="goodCate">绑定手机</a>
+            </header>
+
+            <div class="bindPhone" data-attach-point="bindMobile">
+                  <span>已绑定手机：</span>
+
+                  <p data-attach-point="mobile"></p>
+                  <span class="change-phone" data-attach-point="change">更换</span>
+            </div>
+      </div>
+
+      <!--更换绑定手机-->
+      <div class="change-phone-Info" data-attach-point="changeMobile" style="display: none">
+            <header class="cateHeader">
+                  <div class="search_back" onclick="history.back()"></div>
+                  <a class="goodCate">更换手机</a>
+            </header>
+            <form>
+                  <div class="prove">
+                        <div class="validatePhone">
+                              <span>原手机号：</span>
+                              <input type="text" name="oldMobile" data-attach-point="old_mobile" maxlength="11" class="validate-phone">
+                              <i></i>
+                        </div>
+                        <div class="validatePhone">
+                              <span>新手机号：</span>
+                              <input type="text" name="mobile" data-attach-point="new_mobile" maxlength="11" class="validate-phone">
+                              <i></i>
+                        </div>
+
+                        <div class="validatePhone">
+                              <span>验&nbsp;证&nbsp;码&nbsp;：</span>
+                              <input type="text" name="scode" class="PIN" maxlength="6">
+                              <button type="button" class="sendPin gray-but" disabled="disabled" data-attach-point="get">发送验证码</button>
+                        </div>
+                        <p class="error_txt" data-attach-point="err"></p>
+                  </div>
+                  <div class="operate">
+                        <button type="button" class="saveBtn btn-primary btn-block" data-attach-point="btn">保存</button>
+                  </div>
+            </form>
+
+            <!--更换成功提示框-->
+            <div data-attach-point="suc" class="success" style="display:none;">
+                  <h3 class="reg-success">更换成功!</h3>
+            </div>
+      </div>
+</div>
+<div  data-attach-point="tab2" style="display: none">
+      <div class="change-phone-Info">
+            <header class="cateHeader">
+                  <div class="search_back" onclick="history.back()"></div>
+                  <a class="goodCate">绑定手机</a>
+            </header>
+            <form>
+                  <div class="prove">
+                        <div class="validatePhone">
+                              <span>手&nbsp;机&nbsp;号&nbsp;：</span>
+                              <input type="text" name="mobile" data-attach-point="new_mobile" maxlength="11" class="validate-phone">
+                              <i></i>
+                        </div>
+
+                        <div class="validatePhone">
+                              <span>验&nbsp;证&nbsp;码&nbsp;：</span>
+                              <input type="text" name="scode" class="PIN" maxlength="6">
+                              <button type="button" class="sendPin gray-but" disabled="disabled" data-attach-point="get">发送验证码</button>
+                        </div>
+                        <p class="error_txt" data-attach-point="err"></p>
+                  </div>
+                  <div class="operate">
+                        <button type="button" class="saveBtn btn-primary btn-block" data-attach-point="btn">保存</button>
+                  </div>
+            </form>
+
+            <!--更换成功提示框-->
+            <div class="success"  data-attach-point="suc" style="display:none;">
+                  <h3 class="reg-success">绑定成功!</h3>
+            </div>
+      </div>
+</div>
+<script>
+      require(['components/mobileBind']);
+</script>
+</body>
+</html>

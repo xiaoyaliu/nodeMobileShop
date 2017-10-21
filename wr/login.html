@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+</head>
+<body>
+    <header class="cateHeader">
+        <div class="search_back"></div>
+        <a class="goodCate">登录</a>
+        <div class="go_register">
+            <a>注册</a>
+        </div>
+    </header>
+    <img class="login_log" src="../css/image/loginTop_02.png">
+    <div class="loginBox">
+        <form>
+            <div class="newAddress">
+                <div class="address">
+                    <span>用户名：</span>
+                    <input type="text" maxlength="11" class="username" placeholder="请输入用户名">
+                    <i></i>
+                </div>
+                <div class="address">
+                    <p class="password">密&nbsp;&nbsp; 码&nbsp;：</p>
+                    <input type="password" maxlength="20" placeholder="请输入密码" class="logPwd">
+                    <div class="button_mo button_off_mo button_on_mo"></div>
+                </div>
+            </div>
+
+            <div class="login_check">
+                <div class="login_checkLogin">
+                    <input id="rememberPwd" type="checkbox" checked>
+                    <label for="rememberPwd">一个月内免登录</label>
+                </div>
+                <div class="login_fP">
+                    <div class="ftR"><a href="#">忘记密码?</a></div>
+                </div>
+            </div>
+
+            <div class="operate">
+                <button type="button" class="saveBtn btn-primary btn-block">登&nbsp;录</button>
+            </div>
+        </form>
+
+        <!--提示框-->
+        <div class="phoneDialog" style="display: none">
+            <a class="prompt">用户名密码错误,请重新输入</a>
+        </div>
+
+    </div>
+
+    <!--底部-->
+    <div class="pay_bottom">
+        <a class="loginByQQ">QQ登录</a>
+    </div>
+</body>
+</html>

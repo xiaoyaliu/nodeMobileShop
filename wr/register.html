@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+</head>
+<body>
+<header class="cateHeader">
+    <div class="search_back"></div>
+    <a class="goodCate">注册</a>
+</header>
+
+<!--注册信息-->
+    <div class="insertBox">
+        <form>
+            <div class="newAddress">
+                <div class="address">
+                    <span>手机号：</span>
+                    <input type="text" maxlength="11" class="telephone">
+                    <i></i>
+                </div>
+                <div class="address">
+                    <span>验证码：</span>
+                    <input type="text" class="PIN" maxlength="4">
+                    <span class="sendPin">发送验证码</span>
+                </div>
+                <div class="address">
+                    <p class="password">密&nbsp;&nbsp; 码&nbsp;：</p>
+                    <input type="password" maxlength="20">
+                    <div class="button_mo button_off_mo button_on_mo" ></div>
+                </div>
+            </div>
+            <div class="select-check agreement">
+                <input type="checkbox" checked id="agree">
+                <label for="agree">同意
+                    <a>《优德医药网用户注册协议》</a>
+                </label>
+            </div>
+            <div class="operate">
+                <button type="button" class="saveBtn btn-primary btn-block">完&nbsp;成</button>
+            </div>
+        </form>
+
+        <!--提示框-->
+        <div class="phoneDialog" style="display: none">
+            <a class="prompt">请输入正确的手机号码</a>
+        </div>
+
+        <div class="success" style="display:none;">
+            <h3 class="reg-success">注册成功!</h3>
+        </div>
+
+    </div>
+<!--底部-->
+    <div class="pay_bottom">
+        <a class="loginByQQ">QQ登录</a>
+    </div>
+</body>
+</html>

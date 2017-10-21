@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title">退换货选择 - 优德</title>
+      <meta data-attach-point="keywords" name="keywords" content="">
+      <meta data-attach-point="description" name="description" content="">
+      <link rel="stylesheet" type="text/css" href="../src/mobile.min.css"/>
+      <script src="../require.min.js"></script>
+      <script src="../require-config.js"></script>
+</head>
+<body>
+<!--退/换货-->
+<header class="cateHeader">
+      <div class="search_back" onclick="history.back()"></div>
+      <a class="goodCate">退/换货</a>
+      <div class="go-quick-click" id="go-quick-click">
+            <a></a>
+      </div>
+</header>
+<div class="quick-go-div" id="quick-go-div">
+      <ul class="botList">
+            <li>
+                  <a href="/">首页</a>
+            </li>
+            <li>
+                  <a href="/cart">购物车</a>
+            </li>
+            <li>
+                  <a href="/user">用户中心</a>
+            </li>
+            <li>
+                  <a href="logisticsAll">物流查询</a>
+            </li>
+      </ul>
+</div>
+
+<!--退换货选择-->
+<div class="return-choice">
+      <div class="returnBox">
+            <a href="/refund" data-attach-point="refund">
+                  <img src="/image/retu-typ2.png">
+                  <p>退货退款
+                        <span class="small-span">已收到货，需要退还已收到的商品</span>
+                  </p>
+            </a>
+      </div>
+      <div class="returnBox">
+            <a href="/exchange" data-attach-point="exchange">
+                  <img src="/image/retu-typ3.png">
+                  <p>换货
+                        <span class="small-span">已收到货，需要退换已收到的商品</span>
+                  </p>
+            </a>
+      </div>
+</div>
+<script>require(['components/returnChoose'])</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title"></title>
+      <meta data-attach-point="keywords" name="keywords" content="">
+      <meta data-attach-point="description" name="description" content="">
+      <link rel="stylesheet" type="text/css" href="../src/swiper.min.css"/>
+      <link rel="stylesheet" type="text/css" href="../src/mobile.css"/>
+      <script src="../require.min.js"></script>
+      <script src="../require-config.js"></script>
+</head>
+<body>
+<form>
+<div data-attach-point="data"></div>
+<!--支付方式弹出层-->
+<div class="payType" data-attach-point="pay-box"  style="display: none">
+      <ul class="invoiceType">
+            <li>
+                  <p>选择支付方式</p>
+                  <a class="sback" data-attach-point="cancel-payWay">
+                        <img src="/image/clos.png">
+                  </a>
+                  <div data-attach-point="pay-choice">
+                        <label class="active">在线支付</label>
+                        <!--<label>货到付款</label>-->
+                        <input type="hidden" name="payment" value="4">
+                  </div>
+            </li>
+      </ul>
+      <div class="conBut"  data-attach-point="pay-sure"><a>确认</a></div>
+</div>
+
+<!--发票信息弹出层-->
+<div class="invoice" id="top" data-attach-point="invoice-box" style="display: none">
+      <ul class="invoiceType">
+            <li>
+                  <p>发票信息</p>
+                  <a class="sback" data-attach-point="close-invoice">
+                        <img src="/image/clos.png">
+                  </a>
+                  <div>
+                        <label data-attach-point="invoiceChoice" class="active" onclick="invoiceChoice(0)">不要发票</label>
+                        <label data-attach-point="invoiceChoice" onclick="invoiceChoice(1)">普通发票</label>
+                        <label data-attach-point="invoiceChoice" onclick="invoiceChoice(2)">增值税发票</label>
+                  </div>
+            </li>
+      </ul>
+      <input type="hidden" name="type1" value="0">
+      <input type="hidden" name="content" value="1">
+      <div style="height: 354px;background-color: #fff;text-align:left">
+      <!--普通发票-->
+      <div data-attach-point="tab-invoice" class="addInvoice bus-Info" style="display: none">
+            <div class="shop">
+                  <div class="personal">
+                        <input type="radio" name="type2" id="personal" checked value="1">
+                        <label for="personal">个人</label>
+                  </div>
+
+                  <div class="personal">
+                        <input  type="radio" name="type2" id="business" value="2">
+                        <label for="business">企业</label>
+                  </div>
+            </div>
+            <div class="business">
+                  <input placeholder="发票抬头" name="title" type="text" maxlength="30">
+            </div>
+      </div>
+      <!--增值发票-->
+      <div class="addInvoice"  data-attach-point="tab-invoice" style="display: none">
+            <div class="invoiceInfo">
+                  <span>单位名称：</span>
+                  <input type="text" name="unit_name">
+            </div>
+            <div class="invoiceInfo">
+                  <span>纳税人识别码：</span>
+                  <input type="text" name="code">
+            </div>
+            <div class="invoiceInfo">
+                  <span>注册地址：</span>
+                  <input type="text" name="reg_address">
+            </div>
+            <div class="invoiceInfo">
+                  <span>注册电话：</span>
+                  <input type="text" name="reg_tel" maxlength="12">
+            </div>
+            <div class="invoiceInfo">
+                  <span>开户银行：</span>
+                  <input type="text" name="bank_name">
+            </div>
+            <div class="invoiceInfo">
+                  <span>银行账户：</span>
+                  <input type="text" name="bank_account">
+            </div>
+      </div>
+            <span  class="use_warn" id="warnInv" style="padding-left: 14px;position: relative;top:-30px;"></span>
+      </div>
+
+      <div class="conBut" data-attach-point="invoice-sure"><a href="#">确认</a></div>
+
+
+</div>
+
+<!--礼品卡-->
+<div class="invoice" data-attach-point="giftCard" style="display: none">
+      <ul class="giftCard">
+            <li>
+                  <p>礼品卡</p>
+                  <a class="sback" onclick="hideGiftCard()">
+                        <img src="/image/clos.png">
+                  </a>
+            </li>
+            <div class="giftId">
+                  <input name="real-card" placeholder="请输入您的礼品卡密码" type="text" maxlength="8">
+            </div>
+            <span class="use_warn" data-attach-point="cardWarn" style="display: block;"></span>
+      </ul>
+      <div class="use_bot_btn"  data-attach-point="useGift" >
+            <input type="button" class="gift-use" value="使用">
+      </div>
+      <div class="use_chan_btn" style="display: none" data-attach-point="changeGift">
+            <input type="button" class="gift-no-use" value="不使用礼品卡" data-attach-point="noUseCard">
+            <input type="button" class="gift-change" value="更改礼品卡" data-attach-point="changeUseCard">
+      </div>
+</div>
+<!--使用优惠券-->
+      <input type="hidden" name="voucherP">
+      <input type="hidden" name="cartName">
+      <input type="hidden" name="bonus_use">
+      <input type="hidden" name="real-id">
+      <input type="hidden" name="shippingFee">
+</form>
+<!--遮罩层-->
+<div id="below" class="belowdiv" style="display: none;"></div>
+<div style="display: none" id='common-div' class="dialog"></div>
+<script>require(['components/orderSureWorld'])</script>
+</body>
+</html>

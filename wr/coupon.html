@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+</head>
+<body>
+
+<header class="cateHeader">
+    <div class="search_back"></div>
+    <a class="goodCate">优惠券</a>
+    <div class="go_edit">
+        <a>编辑</a>
+    </div>
+</header>
+
+<!--优惠券选项-->
+    <ul class="coupon">
+        <li class="active">
+            <a>未使用&nbsp;<span>(5)</span></a>
+        </li>
+        <li>
+            <a>已使用&nbsp;<span>(5)</span></a>
+        </li>
+        <li>
+            <a>已过期&nbsp;<span>(5)</span></a>
+        </li>
+    </ul>
+    <div style="display: block">
+        <!--未使用优惠券-->
+        <div class="coupon-unused-box" style="display: block">
+            <div class="coupon-unused">
+                <div class="cou-box">
+                    <p class="coupon-tit"><span>100</span>元优惠券</p>
+                    <p class="minSpend">【消费满1000.00可用】</p>
+                    <p class="ce-time">2016.06.12--2016.06.20
+                        <a class="browse">去逛逛，现在使用</a>
+                    </p>
+                </div>
+                <div class="cou-Opacity"></div>
+            </div>
+
+            <div class="coupon-unused">
+                <div class="cou-box">
+                    <p class="coupon-tit"><span>50</span>元优惠券</p>
+                    <p class="minSpend">【消费满1000.00可用】</p>
+                    <p class="ce-time">2016.06.12--2016.06.20
+                        <a class="browse">去逛逛，现在使用</a>
+                    </p>
+
+                </div>
+                <div class="cou-Opacity"></div>
+            </div>
+
+            <div class="coupon-unused">
+                <div class="cou-box">
+                    <p class="coupon-tit"><span>5</span>元优惠券</p>
+                    <p class="minSpend">【消费满1000.00可用】</p>
+                    <p class="ce-time">2016.06.12--2016.06.20
+                        <a class="browse">去逛逛，现在使用</a>
+                    </p>
+
+                </div>
+                <div class="cou-Opacity"></div>
+            </div>
+
+        </div>
+
+        <!--已使用-->
+        <div class="coupon-used-box" style="display: none">
+            <div class="coupon-used">
+                <div class="used-con-box">
+                    <p class="used-tit"><span>100</span>元优惠券</p>
+                    <p class="used-minSpend">【消费满1000.00可用】</p>
+                    <p class="ce-time">2016.06.12--2016.06.20</p>
+                </div>
+                <span class="cou-used-img"></span>
+                <div class="cou-Opacity"></div>
+            </div>
+
+            <div class="coupon-used">
+                <div class="used-con-box">
+                    <p class="used-tit"><span>50</span>元优惠券</p>
+                    <p class="used-minSpend">【消费满1000.00可用】</p>
+                    <p class="ce-time">2016.06.12--2016.06.20</p>
+                </div>
+                <span class="cou-used-img"></span>
+                <div class="cou-Opacity"></div>
+            </div>
+
+            <div class="coupon-used">
+                <div class="used-con-box">
+                    <p class="used-tit"><span>5</span>元优惠券</p>
+                    <p class="used-minSpend">【消费满1000.00可用】</p>
+                    <p class="ce-time">2016.06.12--2016.06.20</p>
+                </div>
+                <span class="cou-used-img"></span>
+                <div class="cou-Opacity"></div>
+            </div>
+
+        </div>
+
+        <!--已过期-->
+        <div class="coupon-expired-box" style="display: none">
+            <div class="coupon-expired">
+                <div class="expired-con-box">
+                    <p class="expired-tit"><span>100</span>元优惠券</p>
+                    <p class="expired-minSpend">【消费满1000.00可用】</p>
+                    <p class="ce-time">2016.06.12--2016.06.20</p>
+                </div>
+                <span class="cou-expired-img"></span>
+                <div class="cou-Opacity"></div>
+            </div>
+
+            <div class="coupon-expired">
+                <div class="expired-con-box">
+                    <p class="expired-tit"><span>50</span>元优惠券</p>
+                    <p class="expired-minSpend">【消费满1000.00可用】</p>
+                    <p class="ce-time">2016.06.12--2016.06.20</p>
+                </div>
+                <span class="cou-expired-img"></span>
+                <div class="cou-Opacity"></div>
+            </div>
+
+            <div class="coupon-expired">
+                <div class="expired-con-box">
+                    <p class="expired-tit"><span>5</span>元优惠券</p>
+                    <p class="expired-minSpend">【消费满1000.00可用】</p>
+                    <p class="ce-time">2016.06.12--2016.06.20</p>
+                </div>
+                <span class="cou-expired-img"></span>
+                <div class="cou-Opacity"></div>
+            </div>
+
+        </div>
+        <div class="delete-All">
+            <p>全部删除</p>
+        </div>
+    </div>
+    <!--优惠券为空-->
+    <div class="coupon-null" style="display: none">
+        <div class="null-coupon">
+            <div class="empty_coupon">
+                <div class="dole">
+                    <img src="../css/image/null-cou.png">
+                </div>
+                <p>去领券中心看看吧</p>
+                <div class="dole-center">
+                    <a href="javascript:void(0);" class="go_dole_btn">领券中心</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

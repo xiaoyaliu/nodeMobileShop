@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>优德医药网</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../src/mobile.min.css"/>
+    <script src="../require.min.js"></script>
+    <script src="../require-config.js"></script>
+    <style>
+        .so-title{display:inline-block;color:#ffffff;font-size:20px;background-color:#3978E6;width:100%;padding:20px 0px 0px 0px;}
+        .imgList{width: 94%;background-color: #3978E6;padding: 3%;}
+        .imgList ul{border-radius: 5px;background-color: #ffffff;padding:10px;}
+        .list_left{float: left;width: 37%;}
+        .list_fight{float: left;width:56%;font-size: 12px;padding-left: 5%;}
+        .list_left a{display: inline-block;width:100%;height:170px;border:2px dotted #FF9840;}
+        .list_left a img{margin-top: 20px;}
+        .list_fight p{text-align: left;}
+        .fcolor{color:#9b9b9b;}
+        .ftcolor a{color:#000;}
+        .ccolor{color:#FF983B;}
+        .list-detail{border-bottom: 5px solid #e5e5e5;padding-bottom:10px;}
+        .list-detail p{line-height:20px;display: block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+        .list-detail2 p{line-height:20px;display: block;}
+        .so-footer{margin:20px 0px;}
+        /*.list-detail2{max-height:105px;overflow: hidden;}*/
+    </style>
+</head>
+<body class="grayBg">
+<div class="soAdCont">
+    <a href="#">
+        <img src="../image/so-header.jpg" alt=""/>
+    </a>
+</div>
+<div class="section imgCont">
+    <div class="icHeader">
+        <img src="../image/so_title_specia.jpg" alt=""/>
+    </div>
+    <div class="imgList clearfix">
+        <ul class="clearfix" data-attach-point="sr">
+
+        </ul>
+</div>
+
+
+<!--&lt;!&ndash;search_result&ndash;&gt;-->
+<!--<div class="tab_result">-->
+    <!--<ul class="listResult btmShadow" data-attach-point="sr">-->
+
+    <!--</ul>-->
+<!--</div>-->
+<!--回到顶部-->
+<div class="bottom-to-top"  style="display: none" data-attach-point="returnTop"> <img src="../image/big.png" style="width: 100%"> </div>
+<div class="no-data1" data-attach-point="none" style="display: none">
+    <div class="no-data-content">
+        <p> 没有啦 </p>
+    </div>
+</div>
+
+
+
+
+<!--提示框-->
+<div class="dialog" style="display: none">
+    <a class="diaInfo"></a>
+</div>
+
+<script>
+    require(['components/searchResult']);
+</script>
+</body>
+</html>

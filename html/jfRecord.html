@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="/src/mobile.css"/>
+    <title data-attach-point="title"></title>
+    <script src="/require.min.js"></script>
+    <script src="/require-config.js"></script>
+</head>
+<body class="jfRecord">
+<header class="cateHeader">
+    <div class="search_back" onclick="window.history.back()"></div>
+    <a class="goodCate">兑换记录</a>
+</header>
+<div class="jfRecordSection" data-attach-point="jfRecordSection">
+
+</div>
+<div class="noData" style="display:none" data-attach-point="none">
+    <p>已经没有啦，别处看看吧</p>
+</div>
+<div class="bottom-to-top"  style="display: none" data-attach-point="returnTop">
+    <img src="image/big.png" style="width: 100%">
+</div>
+<!--弹出框-->
+<div id="top" class="topdiv" data-attach-point='topdiv'>
+    <ul class="clear_his">
+        <li class="tophis" data-attach-point="tophis"></li>
+        <li>
+            <span class="cancel" id="cancel"><a>取消</a></span>
+            <span class="confirm" id="confirm"><a>确定</a></span>
+        </li>
+    </ul>
+</div>
+<!--遮罩层-->
+<div id="below" class="belowdiv"></div>
+<!--提示框-->
+<div class="dialog" style="display: none;height:100px;">
+    <a class="diaInfo"></a>
+</div>
+</body>
+<script>
+    require(['components/jfRecord']);
+</script>
+</html>

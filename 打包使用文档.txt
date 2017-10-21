@@ -1,0 +1,29 @@
+//***********************前端js打包文档**********************
+打包前的准备
+    页面防挂马
+                //*********处理js挂马【node中】***************
+                      renderUtil.removeBadScript();
+    pc/mobile自由切换
+                //*********切换设备【node中】***************
+                renderUtil.toggleAppointed()
+
+	防镜像
+                //*************禁止其它网站镜像【require-config顶部加】********************
+                if (document.domain != 'touch.youde.com'){
+                    window.location.href='http://touch.youde.com';
+                };
+	百度统计
+	             //************************加在index.js底部****************************
+                    require(['libConfig']);
+
+grunt打包事项
+1、先压缩css,修改html中css路径
+2、修改(html,require-config,gruntfile,package)中js路径。
+3、测试一下,测试完将require-config中的dataHost地址修改一下
+4、将命令行转到项目的根目录下。
+5、执行npm install命令安装Gruntfile文件中打包所依赖的库。
+6、执行 grunt 命令打包。
+
+备注：package.json【列出项目运行所依赖的node插件】
+	  Gruntfile【打包时项目配置文件】
+

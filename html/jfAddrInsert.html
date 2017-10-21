@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <title data-attach-point="title">新增收货地址 - 优德</title>
+    <meta data-attach-point="keywords" name="keywords" content="">
+    <meta data-attach-point="description" name="description" content="">
+    <link rel="stylesheet" type="text/css" href="/src/mobile.min.css"/>
+    <script src="/require.min.js"></script>
+    <script src="/require-config.js"></script>
+</head>
+<body>
+
+<header class="cateHeader">
+    <div class="search_back" onclick="history.back()"></div>
+    <a class="goodCate">新增收货地址</a>
+</header>
+<!--收货信息-->
+<input type="hidden" data-attach-point='hidGood_id'>
+<div class="insertBox">
+    <form data-attach-point="form">
+        <div class="newAddress">
+            <div class="address">
+                <span>收&nbsp;货&nbsp;人&nbsp;：</span>
+                <input type="text" name="consignee" maxlength="20" onkeyup="value=value.replace(/[^A-Za-z\u4E00-\u9FA5]/g,'')" onbeforepaste="clipboardData.setData(''text'',clipboardData.getData(''text'').replace(/[^A-Za-z\u4E00-\u9FA5]/g,''))">
+            </div>
+            <div class="address">
+                <span>联系方式：</span>
+                <input type="text" name="mobile" maxlength="11">
+            </div>
+            <div class="address addressIn">
+                <span>所在地区：</span>
+                <input type="button" data-attach-point="addressInfo" onclick="areaShow()">
+            </div>
+            <div class="address addressDetail">
+                <span>详细地址：</span>
+                <textarea class="textArea" name="address" onkeyup="value=value.replace(/[^A-Za-z\d\u4E00-\u9FA5]/g,'')" onbeforepaste="clipboardData.setData(''text'',clipboardData.getData(''text'').replace(/[^A-Za-z\d\u4E00-\u9FA5]/g,''))"></textarea>
+            </div>
+            <div class="address">
+                <p class="detail_p">设为默认地址：</p>
+                <div class="button_mo button_off_mo"></div>
+            </div>
+        </div>
+        <input type="hidden" id="hide1" name="province" value="">
+        <input type="hidden" id="hide2" name="city" value="">
+        <input type="hidden" id="hide3" name="district" value="">
+        <input type="hidden"  name="setdefault" value="0">
+        <div class="operate">
+            <button type="button" class="saveBtn btn-primary btn-block" data-attach-point="save">保存</button>
+        </div>
+    </form>
+</div>
+<!--选择地址-->
+<div class="AreaChoice" data-attach-point="area">
+    <p class="return" data-attach-point="return"></p>
+    <div class="AreaChoice_right">
+        <p>
+            <a class="return_nex" data-attach-point="returnNex"></a>配送至
+        </p>
+        <div class="areaUI">
+            <!--省份-->
+            <div class="usercity" data-attach-point="province" style="display:block;">
+                <ul style="opacity: 1;">
+                </ul>
+            </div>
+            <!--城市-->
+            <div class="usercity" data-attach-point="city" style="display:none">
+                <ul style="opacity: 1;">
+                </ul>
+            </div>
+            <div class="usercity" data-attach-point="district" style="display: none">
+                <ul style="opacity: 1;">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div style='width: 80%;display: none' id='common-div'></div>
+
+
+<script>require(['components/jfAddrInsert'])</script>
+</body>
+</html>

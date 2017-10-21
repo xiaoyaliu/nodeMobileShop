@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+</head>
+<body>
+<header class="cateHeader">
+    <div class="search_back"></div>
+    <a class="goodCate">需求登记</a>
+</header>
+<div class="needLog">
+    <div class="needLog_box">
+        <div class="prod_rol2">
+            <label>优德价：</label>
+            <span class="before_price">40.00</span>
+        </div>
+        <div class="prod_stock">
+            <span class="stock_num">数量：</span>
+            <div class="stock_count">
+                <span class="stock_reduce">-</span>
+                <input class="sto_count-input1" type="text" value="1">
+                <span class="stock_add">+</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--填写信息-->
+        <form>
+            <ul class="requireInfo">
+                <li>
+                    <label>姓名：</label>
+                    <input type="text"  maxlength="40" placeholder="请输入姓名(必填)">
+                </li>
+                <li>
+                    <label>手机：</label>
+                    <input type="text"  maxlength="11" placeholder="请输入手机号(必填)">
+                </li>
+                <li>
+                    <label>地址：</label>
+                    <div class="show_province">请选择省份</div>
+                </li>
+                <li>
+                    <div class="show_city">请选择市</div>
+                </li>
+                <li>
+                    <div class="show_area">请选择区</div>
+                </li>
+                <li>
+                    <input type="text" class="adr_detail" placeholder="请输入详细地址">
+                </li>
+                <li>
+                    <label>备注：</label>
+                    <input maxlength="120" type="text">
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <div class="req_bot_div">
+        <p class="req_phone">
+            如需协助请拨打<a href="#">4008-606-111</a>
+        </p>
+        <div class="req_btn">
+            <button type="button" class="con_Btn btn-block btn-before">确定</button>
+        </div>
+    </div>
+
+    <!--选择地址-->
+    <div class="AreaChoice animal" style="display: none">
+        <p class="return"></p>
+        <div class="AreaChoice_right">
+            <p>
+                <a class="return_nex"></a>请选择地址
+            </p>
+            <div class="areaUI">
+                <!--省份-->
+                <div class="usercity" style="display:block;">
+                    <ul style="opacity: 1;">
+                        <li>北京</li>
+                        <li>安徽省</li>
+                        <li>福建省</li>
+                        <li>甘肃省</li>
+                        <li>贵州省</li>
+                        <li>河南省</li>
+                        <li>湖北省</li>
+                    </ul>
+                </div>
+                <!--城市-->
+                <div class="usercity" style="display:none">
+                    <ul style="opacity: 1;">
+                        <li>北京市</li>
+                    </ul>
+                </div>
+                <div class="usercity" style="display: none">
+                    <ul style="opacity: 1;">
+                        <li>东城区</li>
+                        <li>西城区</li>
+                        <li>海淀区</li>
+                        <li>朝阳区</li>
+                        <li>崇文区</li>
+                        <li>宣武区</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

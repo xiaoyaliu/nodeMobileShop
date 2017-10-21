@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+    <script type="text/javascript">
+        function showOrHide(flag) {
+            if(flag == 1) {
+                document.getElementById("top").style.display = "block";
+                document.getElementById("below").style.display = "block";
+            }
+            if(flag == 2) {
+                document.getElementById("top").style.display = "none";
+                document.getElementById("below").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<!--全部订单-->
+<header class="cateHeader">
+    <div class="search_back"></div>
+    <a class="goodCate">订单中心</a>
+    <div class="go-quick-click">
+        <a></a>
+    </div>
+</header>
+<!--订单状态-->
+    <ul class="state_list order_ul clearfix">
+        <li class="active">
+            <a>
+                <span>
+                    <i class="shopcar_num">10</i>
+                    <img src="../css/image/allorder.png">
+                </span>全部订单
+            </a>
+        </li>
+        <li>
+            <a>
+                <span>
+                    <i class="shopcar_num">10</i>
+                    <img src="../css/image/waitpay.png">
+                </span>待付款
+            </a>
+        </li>
+        <li>
+            <a>
+                <span>
+                    <i class="shopcar_num">10</i>
+                    <img src="../css/image/waitgood.png">
+                </span>待收货
+            </a>
+        </li>
+        <li>
+            <a>
+                <span>
+                    <img src="../css/image/waitpi.png">
+                </span>待评价
+            </a>
+        </li>
+    </ul>
+
+<!--空订单-->
+    <div class="no_order" style="display: none">
+        <i>&nbsp;</i>
+        <p>抱歉，您目前没有订单</p>
+    </div>
+<!--全部定单-->
+    <div  style="display: block">
+    <!--待收货-->
+        <div class="allOrder_info">
+            <div class="order_id_box">
+                <a onclick="showOrHide(1)"></a>
+                <p>订单编号：<i>1748128997553158</i></p>
+                <p class="order_date">下单时间：<i>2016/02/14&nbsp;13:15:41</i></p>
+            </div>
+            <!--待收货单商品-->
+            <div class="ord_cont" style="display:-webkit-box">
+                <div class="ord-cont-img">
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                </div>
+                <div class="ord-con-name">
+                    <p>
+                        创盈 金斯利安多维片 叶酸 B族 多种营养 维生素
+                    </p>
+                </div>
+                <div class="ord-cont-num">
+                    <span>1</span>
+                </div>
+            </div>
+            <!--待收货多商品-->
+            <div class="ord_cont clearfix" style="display: none">
+                <div class="ord-much-img">
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                </div>
+            </div>
+            <div class="ordSettlement clearfix">
+                <p>实付金额：<i> 260.00</i></p>
+                    <div class="btn-two">
+                        <a class="vied-PD">查看物流</a>
+                        <a class="confirm_get">确认收货</a>
+                    </div>
+            </div>
+            <p class="bot-gray"></p>
+        </div>
+        <!--待付款-->
+        <div class="allOrder_info">
+            <div class="order_id_box">
+                <a onclick="showOrHide(1)"></a>
+                <p>订单编号：<i>1748128997553158</i></p>
+                <p class="order_date">下单时间：<i>2016/02/14&nbsp;13:15:41</i></p>
+            </div>
+
+            <!--待付款多商品-->
+            <div class="ord_cont clearfix" style="display: block">
+                <div class="ord-much-img">
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                </div>
+            </div>
+            <div class="ordSettlement clearfix">
+                <p>实付金额：<i> 260.00</i></p>
+                <div class="btn-two">
+                    <a class="vied-PD">取消订单</a>
+                    <a class="confirm_get">在线支付</a>
+                </div>
+            </div>
+            <p class="bot-gray"></p>
+        </div>
+
+        <!--再次购买-->
+        <div class="allOrder_info">
+            <div class="order_id_box">
+                <a onclick="showOrHide(1)"></a>
+                <p>订单编号：<i>1748128997553158</i></p>
+                <p class="order_date">下单时间：<i>2016/02/14&nbsp;13:15:41</i></p>
+            </div>
+
+            <!--购买的商品-->
+            <div class="ord_cont clearfix">
+                <div class="ord-much-img">
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                </div>
+            </div>
+            <div class="ordSettlement clearfix">
+                <p>实付金额：<i> 260.00</i></p>
+                <div class="btn-two">
+                    <a class="vied-PD">查看物流</a>
+                    <a class="confirm_get">再次购买</a>
+                </div>
+            </div>
+            <p class="bot-gray"></p>
+        </div>
+
+        <!--待评价-->
+        <div class="allOrder_info">
+            <div class="order_id_box">
+                <a onclick="showOrHide(1)"></a>
+                <p>订单编号：<i>1748128997553158</i></p>
+                <p class="order_date">下单时间：<i>2016/02/14&nbsp;13:15:41</i></p>
+            </div>
+
+            <!--购买的商品-->
+            <div class="ord_cont clearfix" style="display: block">
+                <div class="ord-much-img">
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                    <a><img src="../css/image/all_or1.jpg"></a>
+                </div>
+            </div>
+            <div class="ordSettlement clearfix">
+                <p>实付金额：<i> 260.00</i></p>
+                <div class="btn-two">
+                    <a class="vied-PD">查看物流</a>
+                    <a class="confirm_get">去评价</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--删除订单对话框-->
+
+        <div id="top" class="topdiv">
+            <ul class="clear_his">
+                <li class="tophis">您确认要删除此订单吗？</li>
+                <li>
+                    <span class="cancel"><a>取消</a></span>
+                    <span class="confirm"><a>确定</a></span>
+                </li>
+            </ul>
+        </div>
+        <!--遮罩层-->
+        <div id="below" class="belowdiv"></div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html >
+<html id="a">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <title data-attach-point="title"></title>
+    <meta data-attach-point="keywords" name="keywords" content="">
+    <meta data-attach-point="description" name="description" content="">
+    <link rel="stylesheet" type="text/css" href="src/mobile.min.css"/>
+    <script src="require.min.js"></script>
+    <script src="require-config.js"></script>
+</head>
+<body>
+
+    <header class="cateHeader">
+        <div class="search_back" data-attach-point="sb"></div>
+        <a class="goodCate">购物车</a>
+    </header>
+
+    <div class="shopBox">
+        <!--全选-->
+        <div class="select-All">
+            <div class="select-check">
+                <input type="checkbox" id="selectAll" data-attach-point="sa">
+                <label for="selectAll" data-attach-point="ck">全选</label>
+            </div>
+            <div class="select-num">
+                <label>已选<i data-attach-point="num"></i>件商品</label>
+            </div>
+        </div>
+
+        <!--列表-->
+        <div data-attach-point="lord"></div>
+
+
+    </div>
+
+</body>
+<script>
+    require(['components/cart']);
+</script>
+</html>

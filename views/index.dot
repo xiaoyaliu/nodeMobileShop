@@ -1,0 +1,152 @@
+  <article id="container">
+    <!--搜索条-->
+    <header class="clearfix" id="gHeader">
+        <div class="level1">
+            <div class="f_logo">
+                <img src="image/b.png">
+            </div>
+            <div class="search">
+                <a href="/category"><img src="image/w.png"></a>
+            </div>
+            <div class="search_box">
+                <div class="wapSearch" data-attach-point="searchLink">
+                    <button type="submit" class="search_btn"></button>
+                    <input type="text" class="search_txt" placeholder="请输入你要搜索的商品" id="keyword">
+                </div>
+            </div>
+        </div>
+        <div class="logoPacity" style="opacity:0;" data-attach-point="logoPacity"></div>
+    </header>
+    <!--图片轮播-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        {{~ it.topimages:item}}
+            {{? item.gid.indexOf("html")!=-1}}
+                <div class="swiper-slide"><a href="{{=item.gid}}"><img src="{{=item.img}}"></a></div>
+            {{??}}
+                <div class="swiper-slide"><a href="goods/{{=item.gid}}.html"><img src="{{=item.img}}"></a></div>
+            {{?}}
+        {{~}}
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+<div class="test">
+    <!--宫格图标-->
+        <ul class="ind_navi clearfix">
+            <li>
+                <a href="/worldShop"><i><img src="image/worldShop.png"></i>全球购</a>
+            </li>
+            <li>
+                <a href="/cart"><i><img src="image/shopcar.png"></i>购物车</a>
+            </li>
+            <li>
+                <a href="/logisticsAll"><i><img src="image/wuliu.png"></i>物流查询</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" id="AskMed"><i><img src="image/biao.png"></i>在线咨询</a>
+            </li>
+        </ul>
+        <!--分类图标-->
+        <div class="promotion_goods" >
+            <div class="s_box">
+                <div class="l_box">
+                    <a href="so/searchResult.html"><img src="image/jtyy.jpg"></a>
+                </div>
+                <div class="r_box">
+                    <a href="javascript:void(0)" onclick="load()"><img src="image/vip.jpg"></a>
+                </div>
+            </div>
+            <!--积分商城入口跟一元秒杀入口-->
+            <div class="s_box">
+                <div class="r_box rr_box">
+                    <a href="/jfActivity"><img src="image/jfShop.jpg"></a>
+                </div>
+                <div class="l_box">
+                    <a href="/oneSk"><img src="image/oneShop.jpg"></a>
+                </div>
+            </div>
+
+            <div class="x_box">
+                <div class="z_box">
+                      <a href="classifyFl/18"><img src="image/man.jpg"></a>
+                </div>
+                <div class="m_box">
+                    <a href="classifyFl/19"><img src="image/woman.jpg"></a>
+                </div>
+                <div class="y_box">
+                    <a href="classifyFl/20"><img src="image/old_man.jpg"></a>
+                </div>
+            </div>
+        </div>
+        <!--分类列表-->
+            {{~ it.indexTypeInfo:item}}
+                    <div class="mid">
+                        <div>
+                            <a  href="classifyFl/{{=item.url}}"><img src="{{=item.img||'image/like3.jpg'}}"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-container-g">
+                        <div class="swiper-wrapper">
+                            {{~ item.data:tp}}
+                                <li class="swiper-slide">
+                                    <div class="item-img bdr-r">
+                                        <a class="new-link" href="goods/{{=tp.goods_id}}.html"><img src="{{=tp.goods_img}}"></a>
+                                    </div>
+                                    <p class="txt">{{=tp.goods_alias}}</p>
+                                    <!--<div class="item-price">
+                                        <span class="new-price">{{=tp.shop_price}}</span>
+                                    </div>-->
+                                </li>
+                            {{~}}
+                        </div>
+                    </div>
+            {{~}}
+</div>
+<div class="">
+    <img src="/image/recoment.jpg" alt="">
+</div>
+<ul class="clearfix ulItem">
+ {{~ it.recommendInfo:item}}
+    <li class="item item2">
+        <div class="item-img bdr-r">
+            <a class="new-link" href="goods/{{=item.goods_id}}.html">
+               <img src="{{? item.mgoods_img===""||item.mgoods_img===undefined}}{{=item.goods_img}}{{??}}{{=item.mgoods_img}}{{?}}">
+            </a>
+        </div>
+        <p class="txt">{{=item.goods_name}}</p>
+        <div class="item-price">
+            <span class="new-price">¥{{=item.shop_price}}</span>
+        </div>
+    </li>
+{{~}}
+</ul>
+<!--回到顶部-->
+    <div class="bottom-to-top"  style="display: none" data-attach-point="returnTop">
+        <img src="image/big.png" style="width: 100%">
+    </div>
+    <div class="no-data">
+         <div class="no-data-content">
+             <p>
+                 没有啦
+             </p>
+         </div>
+    </div>
+
+</article>
+<!--提示框-->
+<div class="dialog" style="display: none">
+    <a class="diaInfo"></a>
+</div>
+<!--客服-->
+<script>
+(function(a,h,c,b,f,g){a["UdeskApiObject"]=f;a[f]=a[f]||function(){(a[f].d=a[f].d||[]).push(arguments)};g=h.createElement(c);g.async=1;g.src=b;c=h.getElementsByTagName(c)[0];c.parentNode.insertBefore(g,c)})(window,document,"script","https://assets-cli.udesk.cn/im_client/js/udeskApi.js?1489159140237","ud");
+ud({
+    "code": "1cc9ck8i",
+    "link": "https://youde.udesk.cn/im_client?web_plugin_id=23660",
+    "selector": "#AskMed",
+    "targetSelector":".adShowHide"
+});
+
+</script>

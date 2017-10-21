@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <title data-attach-point="title"></title>
+    <meta data-attach-point="keywords" name="keywords" content="">
+    <meta data-attach-point="description" name="description" content="">
+    <link rel="stylesheet" type="text/css" href="../src/dropload.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../src/mobile.min.css"/>
+    <script src="../require.min.js"></script>
+    <script src="../require-config.js"></script>
+</head>
+<!--Vip专区列表页-->
+<body>
+<header class="cateHeader">
+    <div class="search_back" onclick="history.back()"></div>
+    <a class="goodCate" data-attach-point="cat_name">每日特惠</a>
+    <div class="go-quick-click" id="go-quick-click">
+        <a></a>
+    </div>
+</header>
+<div class="quick-go-div" id="quick-go-div">
+    <ul class="botList">
+        <li>
+            <a href="/">首页</a>
+        </li>
+        <li>
+            <a href="/cart">购物车</a>
+        </li>
+        <li>
+            <a href="/user">用户中心</a>
+        </li>
+        <li>
+            <a href="logisticsAll">物流查询</a>
+        </li>
+    </ul>
+</div>
+<!--正文-->
+<div class="pb40" data-attach-point="order-list">
+    <div style="margin-top: 45px;"><img src="../image/oneSk.png" alt=""></div>
+    <div data-attach-point="oneSkTime">
+
+    </div>
+    <ul style="margin-top:0px;"  class="listResult vipZoneUl" data-attach-point="togetherList"></ul>
+</div>
+
+
+<!--提示框-->
+<div class="dialog" style="display: none">
+    <a class="diaInfo"></a>
+</div>
+<!--回到顶部-->
+<div class="bottom-to-top"  style="display: none" data-attach-point="returnTop"> <img src="../image/big.png" style="width: 100%"> </div>
+<div class="no-data1" data-attach-point="none" style="display: none">
+    <div class="no-data-content">
+        <p> 没有啦 </p>
+    </div>
+</div>
+<script>
+    require(['components/oneSk']);
+</script>
+</body>
+</html>

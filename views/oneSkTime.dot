@@ -1,0 +1,21 @@
+<div class="countDown" style="display: block;" data-attach-point="countDown">
+    <span style="font-weight:bold;">限时抢购</span>
+    {{? it.on==2}}
+        <span>秒杀已结束</span>
+    {{?? it.on==0}}
+        <span>距离开始</span>
+        <div class="timeBox" data-attach-point="hours"><span style="width:18px"></span>小时</div>
+        <div class="timeBox" data-attach-point="minutes"><span style="width:18px"></span>分</div>
+        <div class="timeBox" data-attach-point="seconds"><span style="width:18px"></span>秒</div>
+    {{?? it.on==1}}
+    <span>距离结束</span>
+    <div class="timeBox" data-attach-point="days"><span style="width:18px"></span>天</div>
+    <div class="timeBox" data-attach-point="hours"><span style="width:18px"></span>小时</div>
+    <div class="timeBox" data-attach-point="minutes"><span style="width:18px"></span>分</div>
+    <div class="timeBox" data-attach-point="seconds"><span style="width:18px"></span>秒</div>
+    {{?}}
+    <input type="hidden" data-attach-point="startime" value="{{=it.startime}}" />
+    <input type="hidden" data-attach-point="endtime" value="{{=it.endtime}}" />
+    <input type="hidden" data-attach-point="curtime" value="{{=it.curtime}}" />
+    <input type="hidden" data-attach-point="on" value="{{=it.on}}" />
+</div>

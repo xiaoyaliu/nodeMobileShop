@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title"></title>
+      <meta data-attach-point="keywords" name="keywords" content="">
+      <meta data-attach-point="description" name="description" content="">
+      <link rel="stylesheet" type="text/css" href="../src/mobile.min.css"/>
+      <script src="../require.min.js"></script>
+      <script src="../require-config.js"></script>
+</head>
+<body>
+<header class="cateHeader">
+      <div class="search_back" onclick="history.back()"></div>
+      <a class="goodCate">优德收银台</a>
+      <div class="go-quick-click" id="go-quick-click">
+            <a></a>
+      </div>
+</header>
+<div class="quick-go-div" id="quick-go-div">
+      <ul class="botList">
+            <li>
+                  <a href="/">首页</a>
+            </li>
+            <li>
+                  <a href="/cart">购物车</a>
+            </li>
+            <li>
+                  <a href="/user">用户中心</a>
+            </li>
+            <li>
+                  <a href="/logisticsAll">物流查询</a>
+            </li>
+      </ul>
+</div>
+<div data-attach-point="data"><div class="payWay">
+      <p>请选择支付方式：</p>
+      <strong id="money"></strong>
+</div>
+      <div class="payChoice">
+            <a onclick="alipay()">
+                  <img src="/image/payType1.png">
+                  <p>支付宝支付
+                        <span class="small-span">安全快捷又放心，大家喜欢的支付方式！</span>
+                  </p>
+            </a>
+      </div>
+      <div class="payChoice">
+            <a onclick="unionpay()">
+                  <img src="/image/payType2.png">
+                  <p>银行卡支付
+                        <span>支持借记卡、信用卡！</span>
+                  </p>
+            </a>
+      </div></div>
+<script>require(["components/payChoice"])</script>
+</body>
+</html>

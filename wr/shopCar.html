@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+    <script type="text/javascript">
+        function showOrHide(flag) {
+            if(flag == 1) {
+                document.getElementById("top").style.display = "block";
+                document.getElementById("below").style.display = "block";
+            }
+            if(flag == 2) {
+                document.getElementById("top").style.display = "none";
+                document.getElementById("below").style.display = "none";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <header class="cateHeader">
+        <div class="search_back"></div>
+        <a class="goodCate">购物车</a>
+    </header>
+
+
+    <!--购物列表-->
+    <div class="shopBox" style="display:block;">
+        <div class="select-All">
+            <div class="select-check">
+                <input type="checkbox" id="selectAll" checked>
+                <label for="selectAll">全选</label>
+            </div>
+            <div class="select-num">
+                <label>共 <i>4 </i>件商品</label>
+            </div>
+        </div>
+
+        <div class="proListBox proListBoxBlue">
+            <div class="check-box1">
+                <input type="checkbox"checked id="check1">
+                <label for="check1">check</label>
+            </div>
+            <a href="javascript:void(0)" class="btnDelete" onclick="showOrHide(1)"></a>
+            <div class="imgBox">
+                <img src="../css/image/yao.jpg">
+            </div>
+            <div class="textBox">
+                <p class="title">
+                    <a>东阿阿胶250g/盒</a>
+                </p>
+                <p class="price">
+                    <span class="price_reduce">立减40.00元</span>
+                </p>
+                <p class="price">
+                    <span class="price_l">¥ 1185.0</span>
+                    <span class="price_s">省: ¥10.00</span>
+                </p>
+                <div class="numCount">
+                    <span class="reduce reduceDisable">-</span>
+                    <input class="count-input" type="text" name="BuyCount" value="1">
+                    <span class="add">+</span>
+                </div>
+            </div>
+        </div>
+        <div class="proListBox proListBoxBlue">
+            <div class="check-box1">
+                <input type="checkbox" id="check2" checked>
+                <label for="check2">check</label>
+            </div>
+            <a href="javascript:void(0)" class="btnDelete" onclick="showOrHide(1)"></a>
+            <div class="imgBox">
+                <img src="../css/image/carimg1.jpg">
+            </div>
+            <div class="textBox">
+                <p class="title">
+                    <a>东阿阿胶250g/盒</a>
+                </p>
+                <p class="price">
+                    <span class="price_reduce">立减40.00元</span>
+                </p>
+                <p class="price">
+                    <span class="price_l">¥ 1185.0</span>
+                    <span class="price_s">省: ¥10.00</span>
+                </p>
+                <div class="numCount">
+                    <span class="reduce reduceDisable">-</span>
+                    <input class="count-input" type="text" name="BuyCount" value="1">
+                    <span class="add">+</span>
+                </div>
+            </div>
+        </div>
+        <div class="proListBox proListBoxBlue">
+            <div class="check-box1">
+                <input type="checkbox" id="check3" checked>
+                <label for="check3">check</label>
+            </div>
+            <a href="javascript:void(0)" class="btnDelete" onclick="showOrHide(1)"></a>
+            <div class="imgBox">
+                <img src="../css/image/yao.jpg">
+            </div>
+            <div class="textBox">
+                <p class="title">
+                    <a>东阿阿胶250g/盒</a>
+                </p>
+                <p class="price">
+                    <span class="price_reduce">立减40.00元</span>
+                </p>
+                <p class="price">
+                    <span class="price_l">¥ 1185.0</span>
+                    <span class="price_s">省: ¥10.00</span>
+                </p>
+                <div class="numCount">
+                    <span class="reduce reduceDisable">-</span>
+                    <input class="count-input" type="text" name="BuyCount" value="1">
+                    <span class="add">+</span>
+                </div>
+            </div>
+        </div>
+        <div class="proListBox proListBoxBlue">
+            <div class="check-box1">
+                <input type="checkbox" id="check4" checked>
+                <label for="check4">check</label>
+            </div>
+            <a href="javascript:void(0)" class="btnDelete" onclick="showOrHide(1)"></a>
+            <div class="imgBox">
+                <img src="../css/image/yao.jpg">
+            </div>
+            <div class="textBox">
+                <p class="title">
+                    <a>东阿阿胶250g/盒</a>
+                </p>
+                <p class="price">
+                    <span class="price_reduce">立减40.00元</span>
+                </p>
+                <p class="price">
+                    <span class="price_l">¥ 1185.0</span>
+                    <span class="price_s">省: ¥10.00</span>
+                </p>
+                <div class="numCount">
+                    <span class="reduce reduceDisable">-</span>
+                    <input class="count-input" type="text" name="BuyCount" value="1">
+                    <span class="add">+</span>
+                </div>
+            </div>
+        </div>
+
+        <!--底部-->
+
+        <div class="ord-bot">
+            <input type="checkbox" id="totMoney" checked>
+            <label for="totMoney"></label>
+            <a class="red_btn">去结算</a>
+
+                <span class="thrift">共节省：
+                     <span class="thrift-money">¥ 2.00</span>
+                </span>
+
+                <span class="finMoney">实付款：
+                    <span class="totalMoney"> 3825.00</span>
+                </span>
+
+                <span class="postage">本订单已包邮</span>
+        </div>
+
+
+        <!--弹出层-->
+        <div id="top" class="topdiv">
+            <ul class="clear_his">
+                <li class="tophis">确认要删除这个宝贝吗？</li>
+                <li>
+                    <span class="cancel"><a>取消</a></span>
+                    <span class="confirm"><a>确定</a></span>
+                </li>
+            </ul>
+        </div>
+        <!--遮罩层-->
+        <div id="below" class="belowdiv" style="display: none;"></div>
+    </div>
+
+    <!--空购物车-->
+
+    <div class="nullCart" style="display: none">
+        <div class="cart_null">
+            <div class="empty_cart taCenter">
+                <div class="img_cart">
+                    <img src="../css/image/cart_null.png">
+                </div>
+                <p>购物车空空的，快去挑选商品吧！</p>
+                <div class="go_home"><a href="javascript:void(0);" class="bule_btn">去逛逛</a></div>
+            </div>
+        </div>
+
+        <!--底部-->
+        <div class="floor bottom-bar-pannel">
+            <div class="floor-container">
+                <ul class="tab4">
+                    <li>
+                            <span class="bar-img">
+                                <a class="index" href="javascript:void(0)"><img src="../css/image/shouGo.png"></a>
+                            </span>
+                        <span class="cart-index">首页</span>
+                    </li>
+                    <li>
+                            <span class="bar-img">
+                                <a class="category" href="javascript:void(0)"><img src="../css/image/category.png"></a>
+                            </span>
+                        <span class="cart-span">分类</span>
+                    </li>
+                    <li>
+                            <span class="bar-img">
+                                <a class="shopcar" href="javascript:void(0)">
+                                    <img src="../css/image/gw.png">
+                                </a>
+                                <span class="cart-span">购物车</span>
+                            </span>
+                    </li>
+                    <li>
+                            <span class="bar-img">
+                                <a class="mine" href="javascript:void(0)">
+                                    <img src="../css/image/z.png">
+                                </a>
+                                <span class="cart-span">我的</span>
+                            </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

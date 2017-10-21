@@ -1,0 +1,42 @@
+        <!--tab-->
+        <div class="search-list">
+            <div class="tabOorderBy">
+                <ul class="tabThree">
+                    <li data-attach-point="t1" class="orderBy1 active" style="float: left"><a><span class="span1">综合</span></a></li>
+                    <li data-attach-point="t2" class="orderBy2" style="text-align: center"><a><span>销量</span></a></li>
+                    <li data-attach-point="t3" class="orderBy3" style="float: right;"><a><span id='priceId' class="default">价格</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--tab_result-->
+        <div class="tab_result">
+            <ul class="listResult" data-attach-point="sr">
+                {{~ it.info:item}}
+                <li>
+                    <a href="/goods/{{=item.goods_id}}.html">
+                        <div class="resultShow">
+                            <div class="resultLeft">
+                                <div class="resultBorder"> <img src="{{=item.goods_img}}"> </div>
+                            </div>
+                            <div class="resultRight">
+                                <p class="rowP1">{{=item.goods_name}}</p>
+                                <div class="rowP2"> <span class="row2Span1"><i>¥</i>{{=item.shop_price}}</span> <span class="original-price">{{=item.market_price}}</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                  {{? item.is_out===1&&item.goods_number>10}}
+                    <div class="cart" data-attach-point="addCar" gid="{{=item.goods_id}}"></div>
+                  {{?}}
+                </li >
+                {{~}}
+            </ul>
+        </div>
+        <!--回到顶部-->
+        <div class="bottom-to-top"  style="display: none" data-attach-point="returnTop"> <img src="../image/big.png" style="width: 100%"> </div>
+        <div class="no-data1" data-attach-point="none" style="display: none">
+            <div class="no-data-content">
+                <p> 没有啦 </p>
+            </div>
+        </div>

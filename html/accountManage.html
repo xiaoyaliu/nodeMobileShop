@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title"></title>
+      <meta data-attach-point="keywords" name="keywords" content="">
+      <meta data-attach-point="description" name="description" content="">
+      <link rel="stylesheet" type="text/css" href="src/mobile.min.css"/>
+      <script src="require.min.js"></script>
+      <script src="require-config.js"></script>
+</head>
+<body>
+<!--账户管理-->
+<header class="cateHeader">
+      <div class="search_back" onclick="history.back()"></div>
+      <a class="goodCate">账户管理</a>
+      <div class="go-quick-click" id="go-quick-click">
+            <a></a>
+      </div>
+</header>
+<div class="quick-go-div" id="quick-go-div">
+      <ul class="botList">
+            <li>
+                  <a href="/">首页</a>
+            </li>
+            <li>
+                  <a href="/cart">购物车</a>
+            </li>
+            <li>
+                  <a href="/user">用户中心</a>
+            </li>
+            <li>
+                  <a href="logisticsAll">物流查询</a>
+            </li>
+      </ul>
+</div>
+<!--账户管理列表-->
+<ul class="navi_list account-list">
+      <li>
+            <a href="/changePwd">修改密码</a>
+      </li>
+      <li>
+            <a href="/mobileBind">绑定手机</a>
+      </li>
+      <li>
+            <a href="/addressList">地址管理</a>
+      </li>
+      <li> <a href="/points">我的积分</a> </li>
+      <li> <a href="/coupon">我的优惠券</a> </li>
+</ul>
+
+<div class="checkout_btn"> <a class="exit-account" data-attach-point="quit">退出当前账户</a> </div>
+<!--弹出层-->
+<div id="top" class="topdiv">
+    <ul class="clear_his">
+        <li class="tophis">确认退出登录吗？</li>
+        <li>
+            <span class="cancel" id="cancel" data-attach-point="cl"><a>取消</a></span>
+            <span class="confirm" id="ok" data-attach-point="ok"><a>确定</a></span>
+        </li>
+    </ul>
+</div>
+<!--遮罩层-->
+<div id="below" class="belowdiv" style="display: none;"></div>
+
+<script>require(['components/account'])</script>
+</body>
+</html>

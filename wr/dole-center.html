@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+    <title></title>
+    <script type="text/javascript">
+        function showOrHide(flag) {
+            if(flag == 1) {
+                document.getElementById("top").style.display = "block";
+                document.getElementById("below").style.display = "block";
+            }
+            if(flag == 2) {
+                document.getElementById("top").style.display = "none";
+                document.getElementById("below").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<!--领券中心-->
+<header class="cateHeader">
+    <div class="search_back"></div>
+    <a class="goodCate">领券中心</a>
+</header>
+
+    <div class="dole-top">
+        <img src="../css/image/dole.jpg">
+    </div>
+    <div class="coupon-center">
+        <div class="coupon-cen-box">
+            <div class="rig-bor">
+                <div class="un-dole">
+                    <div class="left-dole">
+                        <p class="dole-tit"><span>100</span>元优惠券</p>
+                        <p class="dole-minSpend">【消费满1000.00可用】</p>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="right-dole">
+                        <a onclick="showOrHide(1)">立即<br>领取</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="coupon-cen-box">
+            <div class="rig-bor">
+                <div class="un-dole">
+                    <div class="left-dole">
+                        <p class="dole-tit"><span>50</span>元优惠券</p>
+                        <p class="dole-minSpend">【消费满1000.00可用】</p>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="right-dole">
+                        <a onclick="showOrHide(1)">立即<br>领取</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!--领取成功弹出层-->
+    <div id="top" class="topdiv dole-success">
+        <p class="dole-mes">恭喜您，领取成功！</p>
+        <p class="see">可在 用户中心>账户管理>优惠券 中查看</p>
+
+        <div class="dole-center">
+            <a href="javascript:void(0);" class="go_dole_btn">去逛逛</a>
+        </div>
+        <p class="dole-suc-bot">
+            <span class="can-cel"><a>取消</a></span>
+            <span class="con-firm"><a>确定</a></span>
+        </p>
+    </div>
+
+<!--遮罩层-->
+    <div id="below" class="belowdiv" style="display: none;"></div>
+</body>
+</html>

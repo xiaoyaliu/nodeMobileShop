@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <title data-attach-point="title"></title>
+    <meta data-attach-point="keywords" name="keywords" content="">
+    <meta data-attach-point="description" name="description" content="">
+    <link rel="stylesheet" type="text/css" href="src/mobile.min.css"/>
+    <script src="require.min.js"></script>
+    <script src="require-config.js"></script>
+</head>
+<body>
+<div data-attach-point="nav">
+    <div class="head-img">
+        <div class="search_back go-back"  onclick="window.history.back()"></div>
+        <div class="my-info"> <span class="my-img"> </span>
+
+
+        </div>
+    </div>
+    <!--商品状态-->
+    <ul class="user_center_list clearfix">
+        <li> <a href="/order/wp"> <span><img src="image/waitpay.png"> </span>待付款 </a> </li>
+        <li> <a href="/order/wc"> <span>  <img src="image/waitgood.png"> </span>待收货 </a> </li>
+        <li> <a href="/order/wr"> <span> <img src="image/waitpi.png"> </span>待评价 </a> </li>
+    </ul>
+
+</div>
+<!--用户中心列表-->
+<ul class="navi_list clearfix">
+    <li> <a href="/order/os">全部订单</a> </li>
+    <li> <a href="/concern">我的关注</a> </li>
+    <li> <a href="/browser">浏览记录</a> </li>
+    <li> <a href="/account">账户管理</a> </li>
+    <li> <a href="/mess">个人信息</a> </li>
+    <li> <a href="/returnRecord">退换货记录</a> </li>
+    <li> <a href="/feedback">问题反馈</a> </li>
+    <!--<li> <a href="/service">客服中心</a> </li>-->
+</ul>
+<!--<div class="checkout_btn"> <a class="exit-account" data-attach-point="quit">退出当前账户</a> </div>-->
+
+
+<div id="foot" class="foot-sec">
+    <div id="footer">
+        <nav class="download_link">
+            <a data-attach-point="downApp">下载客户端</a>
+        </nav>
+        <p>
+            豫备案号ICP备14026278-1
+            <a style="color: #0093e7" href="/youdeService">资质证书</a>
+        </p>
+        <p>版权信息：河南优德大药房连锁有限公司</p>
+    </div>
+</div>
+
+<script>require(['components/user']);</script>
+</body>
+</html>

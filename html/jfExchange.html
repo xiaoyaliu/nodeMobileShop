@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="/src/mobile.css"/>
+    <title>优徳医药网-积分兑换</title>
+    <script src="/require.min.js"></script>
+    <script src="/require-config.js"></script>
+</head>
+<body>
+<!--订单详情-->
+<header class="cateHeader">
+    <div class="search_back" onclick="window.history.back()"></div>
+    <a class="goodCate">积分兑换</a>
+</header>
+<div class="order-info-box jfExchange-cont" data-attach-point="jfExcSection" style="display: block">
+
+</div>
+<input data-attach-point="hid" type="hidden" value="">
+<!--提示框-->
+<div class="dialog" style="display: none">
+    <a class="diaInfo"></a>
+</div>
+</body>
+<script>
+    require(['components/jfExchange']);
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="/src/mobile.css"/>
+    <title></title>
+    <script src="/require.min.js"></script>
+    <script src="/require-config.js"></script>
+</head>
+<body>
+<!--订单详情-->
+<header class="cateHeader">
+    <div class="search_back" onclick="window.history.back()"></div>
+    <a class="goodCate">兑换详情</a>
+</header>
+<div class="order-info-box" style="display: block" data-attach-point='jfDetailSection'>
+
+</div>
+<input type="hidden" data-attach-point='hidVal'>
+<!--弹出框-->
+<div id="top" class="topdiv" data-attach-point='topdiv'>
+    <ul class="clear_his">
+        <li class="tophis" data-attach-point="tophis"></li>
+        <li>
+            <span class="cancel" id="cancel"><a>取消</a></span>
+            <span class="confirm" id="confirm"><a>确定</a></span>
+        </li>
+    </ul>
+</div>
+<!--遮罩层-->
+<div id="below" class="belowdiv"></div>
+<!--提示框-->
+<div class="dialog" style="display: none;height:100px;">
+    <a class="diaInfo"></a>
+</div>
+</body>
+<script>
+    require(['components/jfExchangeDetail']);
+</script>
+</html>

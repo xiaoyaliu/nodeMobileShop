@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta http-equiv="pragma" content="no-cache">
+      <title data-attach-point="title"></title>
+      <meta data-attach-point="keywords" name="keywords" content="">
+      <meta data-attach-point="description" name="description" content="">
+      <link rel="stylesheet" type="text/css" href="../src/mobile.min.css"/>
+      <script src="../require.min.js"></script>
+      <script src="../require-config.js"></script>
+      <style>
+            .upload_img i{
+                  display: none;
+            }
+            .refund-img{
+                  position: relative;
+            }
+            form{
+                  height: 64px;
+                  position: relative;
+            }
+            .file-input-wrapper{
+                  position: absolute;
+                  top: 0px;
+                  z-index: 100;
+                  width: 64px;
+                  height: 64px;
+                  left: 0px;
+                  margin-left: 0px;
+            }
+            .file-input{
+                  position: absolute;
+                  width: 64px;
+                  height: 64px;
+                  left: 0px;
+                  z-index: 2;
+                  opacity: 0.1;
+            }
+            .upload-img-list{
+                  float: left;
+            }
+      </style>
+</head>
+<body>
+<!--退货退款-->
+<div>
+      <header class="cateHeader">
+            <div class="search_back" onclick="history.back()"></div>
+            <a class="goodCate">退货退款</a>
+      </header>
+
+      <!--退货商品信息-->
+
+    <div data-attach-point="data"></div>
+
+      <!--选择全部-->
+      <div class="select-All-ret">
+            <div class="select-check">
+                  <input type="checkbox" id="select-all" data-attach-point="selectAll">
+                  <label for="select-all">选择全部</label>
+            </div>
+            <div class="tot-money">
+                  <label>总金额：<span class="price_l">¥ <strong data-attach-point="total-money">0.00</strong></span></label>
+            </div>
+      </div>
+      <div class="top-gray"></div>
+
+      <!--填写退货信息-->
+      <div class="refund-Info">
+            <ul class="refund-ul">
+                  <li>
+                        <p>退货原因<i>*</i></p>
+                        <div class="refund-season">
+                              <textarea placeholder="&nbsp;请输入退货原因" name="reason"></textarea>
+                        </div>
+                  </li>
+                  <li>
+                        <p>退款金额<i>*</i><span>(不超过本单实付金额)</span></p>
+                        <div class="refund-money">
+                              <input type="text" maxlength="10" name="money" class="redInput">
+                        </div>
+                  </li>
+                  <li>
+                        <p>退货说明&nbsp;&nbsp;<span>可不填</span></p>
+                        <div class="refund-money">
+                              <textarea name="remarks"></textarea>
+                        </div>
+                  </li>
+            </ul>
+      </div>
+
+      <div class="refund-img clearfix">
+
+            <form data-attach-point="form">
+                  <a>
+                        <img src="/image/upload_03.png">
+                  </a>
+                  <div class="file-input-wrapper">
+                        <input type="file" class="file-input" multiple="multiple"  accept="image/*" name="returnup" data-attach-point="file" onchange="uploadImg(this)">
+                  </div>
+
+                  <div data-attach-point="imgList" class="upload-img-list">
+
+                  </div>
+            </form>
+      </div>
+      <div class="clear"></div>
+      <!--提交申请-->
+      <div class="operate">
+            <button type="button" class="saveBtn btn-primary btn-block" data-attach-point="submitBtn">提交申请</button>
+      </div>
+
+</div>
+<script>require(['components/exchange']);</script>
+</body>
+</html>

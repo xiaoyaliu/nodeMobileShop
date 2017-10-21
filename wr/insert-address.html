@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../css/src/mobile.css"/>
+
+    <title></title>
+</head>
+<body>
+
+    <!--新增收货地址页面-->
+    <div style="display:block;">
+        <header class="cateHeader">
+            <div class="search_back"></div>
+            <a class="goodCate">新增收货地址</a>
+        </header>
+        <!--收货信息-->
+        <div class="insertBox">
+            <form>
+                <div class="newAddress">
+                    <div class="address">
+                        <span>收&nbsp;货&nbsp;人&nbsp;：</span>
+                        <input type="text" maxlength="20">
+                    </div>
+                    <div class="address">
+                        <span>联系方式：</span>
+                        <input type="text" maxlength="11">
+                    </div>
+                    <div class="address addressIn">
+                        <span>所在地区：</span>
+                        <input type="button">
+                    </div>
+                    <div class="address addressDetail">
+                        <span>详细地址：</span>
+                        <textarea class="textArea"></textarea>
+                    </div>
+                    <div class="address">
+                        <p class="detail_p">设为默认地址：</p>
+                        <div class="button_mo button_off_mo button_on_mo"></div>
+                    </div>
+                </div>
+                <div class="operate">
+                    <button type="button" class="saveBtn btn-primary btn-block">保&nbsp;存</button>
+                </div>
+            </form>
+            <!--选择地址-->
+            <div class="AreaChoice animal" style="display: none">
+                <p class="return"></p>
+                <div class="AreaChoice_right">
+                    <p>
+                        <a class="return_nex"></a>配送至
+                    </p>
+                    <div class="areaUI">
+                        <!--省份-->
+                        <div class="usercity" style="display:block;">
+                            <ul style="opacity: 1;">
+                                <li>北京</li>
+                                <li>安徽省</li>
+                                <li>福建省</li>
+                                <li>甘肃省</li>
+                                <li>贵州省</li>
+                                <li>河南省</li>
+                                <li>湖北省</li>
+                            </ul>
+                        </div>
+                        <!--城市-->
+                        <div class="usercity" style="display:none">
+                            <ul style="opacity: 1;">
+                                <li>北京市</li>
+                            </ul>
+                        </div>
+                        <div class="usercity" style="display: none">
+                            <ul style="opacity: 1;">
+                                <li>东城区</li>
+                                <li>西城区</li>
+                                <li>海淀区</li>
+                                <li>朝阳区</li>
+                                <li>崇文区</li>
+                                <li>宣武区</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+     </div>
+    <!--编辑收货地址页面-->
+    <div style="display:none;">
+        <header class="cateHeader">
+            <div class="search_back"></div>
+            <a class="goodCate">编辑收货地址</a>
+        </header>
+        <!--收货信息-->
+        <div class="insertBox">
+            <form>
+                <div class="newAddress">
+                    <div class="address">
+                        <span>收&nbsp;货&nbsp;人&nbsp;：</span>
+                        <input type="text" maxlength="20">
+                    </div>
+                    <div class="address">
+                        <span>联系方式：</span>
+                        <input type="text" class="mobile" maxlength="11">
+                    </div>
+                    <div class="address addressIn">
+                        <span>所在地区：</span>
+                        <input type="button">
+                    </div>
+                    <div class="address addressDetail">
+                        <span>详细地址：</span>
+                        <textarea class="textArea" maxlength="50"></textarea>
+                    </div>
+                    <div class="address">
+                        <p class="detail_p">设为默认地址：</p>
+                        <div class="button_mo button_off_mo button_on_mo"></div>
+                    </div>
+                </div>
+                <div class="operate">
+                    <button type="button" class="saveBtn btn-primary btn-block">保&nbsp;存</button>
+                </div>
+            </form>
+            <!--选择地址-->
+            <div class="AreaChoice animal" style="display: -webkit-box">
+                <p class="return"></p>
+                <div class="AreaChoice_right">
+                    <p>
+                        <a class="return_nex"></a>配送至
+                    </p>
+                    <div class="areaUI">
+                        <!--省份-->
+                        <div class="usercity" style="display:block;">
+                            <ul style="opacity: 1;">
+                                <li>北京</li>
+                                <li>安徽省</li>
+                                <li>福建省</li>
+                                <li>甘肃省</li>
+                                <li>贵州省</li>
+                                <li>河南省</li>
+                                <li>湖北省</li>
+                            </ul>
+                        </div>
+                        <!--城市-->
+                        <div class="usercity" style="display: none">
+                            <ul style="opacity: 1;">
+                                <li>北京市</li>
+                            </ul>
+                        </div>
+                        <!--区-->
+                        <div class="usercity" style="display: none">
+                            <ul style="opacity: 1;">
+                                <li>东城区</li>
+                                <li>西城区</li>
+                                <li>海淀区</li>
+                                <li>朝阳区</li>
+                                <li>崇文区</li>
+                                <li>宣武区</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

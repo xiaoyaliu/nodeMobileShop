@@ -1,0 +1,54 @@
+    <div class="search-list">
+        <div class="middle">
+            <div class="top">
+                <div style="clear: both;"></div>
+                <div class="content">
+                    <img src="../image/bb.png" style="width: 90px"><br>
+                    <img style="margin-top: -8px; width: 100px" src="../image/gg.png" >
+                    <p class="sorry">很抱歉，没有找到相关的信息！</p>
+                </div>
+            </div>
+            <div class="middle">
+                <p class="dj">您可以填写需求登记</p>
+                <form id="needMessageForm">
+                    <ul class="needMessage">
+                        <li class="Info">
+                            <label class="labelLeft">药品名称</label>
+                            <input type="text" name="drugname" autocomplete="off" class="drugsName" data-attach-point="yn" disabled>
+                        </li>
+                        <li class="Info">
+                            <label  class="labelLeft">药品规格</label>
+                            <input type="text" name="druggg" autocomplete="off" class="drugsBit" data-attach-point="searchCase">
+                            <a class="icon-close-input2" style="display: none" data-attach-point="icon"></a>
+                        </li>
+                        <li class="Info">
+                            <label  class="labelLeft">药品数量</label>
+                            <input type="text" name="drugnum" autocomplete="off" class="drugsNum" data-attach-point="searchCase">
+                            <a class="icon-close-input3" style="display: none" data-attach-point="icon"></a>
+                        </li>
+                        <li class="Info">
+                            <label class="requireWrite">手机号码</label>
+                            <input type="text"  name="mobile" class="right" data-attach-point="searchCase" id="ph">
+                            <a class="icon-close-input4" style="display: none" data-attach-point="icon"></a>
+                        </li>
+                         <!-- 提示 -->
+                         <div class="infoT txt-err" style="display:none" id="phError">请填写有效的手机号码</div>
+                        <li class="beizhu">
+                            <label class="labelLeft">备&nbsp;&nbsp;注</label>
+                            <textarea rows="7" cols="37" name="writeBei" class="writeBei"></textarea>
+                        </li>
+                        <li>
+                            <p class="zx">如紧急，请拨打<a class="phone" style="text-decoration: none">4008-606-111</a>咨询</p>
+                        </li>
+                        <li class="call">
+                            <p class="btn-p">
+                                <input class="btn" name="button" type="button" value="电话咨询">
+                                <input class="isubmit-addr2"  name="submit" type="button" value="提交" id="commit">
+                            </p>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+
+    </div>

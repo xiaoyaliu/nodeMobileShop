@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>征集令</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/mobile.min.css"/>
+    <script src="require.min.js"></script>
+    <script src="require-config.js"></script>
+</head>
+<body>
+<div class="voteInfoWrap" data-attach-point="voteInfoWrap">
+    <h3>优德医药网吉祥物名字征集</h3>
+    <div class="voteInfo">
+        <div class="infoLeft">总共:<span data-attach-point="allCont"></span>条投票信息</div>
+        <div class="infoRight">总共：<span data-attach-point="category"></span>种吉祥物名称</div>
+    </div>
+    <table cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>投票名称</th>
+                <th>出现次数</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody data-attach-point="voteList"></tbody>
+    </table>
+    <div class="no-data1" data-attach-point="none" style="display: none">
+        <div class="no-data-content">
+            <p> 没有啦 </p>
+        </div>
+    </div>
+</div>
+<div class="zjLingTips" data-attach-point="tips"></div>
+<div class="bottom-to-top" style="display: none;" data-attach-point="returnTop"> <img src="/image/big.png" style="width: 100%"> </div>
+<div class="usersInfoWrap" data-attach-point="usersInfoWrap">
+    <span onclick="closeVoteInfo();" class="voteClose">关闭</span>
+    <h3>作者列表</h3>
+    <ul class="voteInfoTh">
+        <li><label>作者名字</label>作者电话</li>
+    </ul>
+    <ul class="usersList"></ul>
+</div>
+
+<script>
+    require(['components/vote']);
+</script>
+</body>
+</html>
